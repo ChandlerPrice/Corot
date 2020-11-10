@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {}
+    "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {
+    "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+        "projectUniqueName": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
         "projectName": "Corot",
-        "projectPath": "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
-        "packagesPath": "C:\\Users\\Gage Somerville\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\obj\\",
+        "projectPath": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+        "packagesPath": "C:\\Users\\Spencer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Gage Somerville\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Spencer\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
