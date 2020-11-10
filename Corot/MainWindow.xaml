@@ -8,15 +8,11 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_TownName">
-            </MenuItem>
-            <MenuItem Header="_People">
-            </MenuItem>
-            <MenuItem Header="_Food">
-            </MenuItem>
-            <MenuItem Header="_Happiness">
-            </MenuItem>
-            <MenuItem Header="_Day">
+            <MenuItem Header="_TownName"/>
+            <MenuItem Header="_People"/>
+            <MenuItem Header="_Food"/>
+            <MenuItem  x:Name="dayHeader" Header="_Day #1">
+                <MenuItem Header="Next Day" Click="NextDay"/>
             </MenuItem>
         </Menu>
     </Grid>

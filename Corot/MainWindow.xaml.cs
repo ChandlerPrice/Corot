@@ -20,7 +20,7 @@ namespace Corot
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int Day = 0;
+        public int Day = 1;
         public int People = 0;
         public int Food = 0;
 
@@ -29,5 +29,12 @@ namespace Corot
             InitializeComponent();
         }
 
+        public void NextDay(Object sender, RoutedEventArgs e)
+        {
+            Day++;
+            dayHeader.Header = ("Day #" + Day);
+            //Call random events
+            //Remove food
+        }
     }
 }
