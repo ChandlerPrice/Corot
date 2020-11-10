@@ -20,12 +20,14 @@ namespace Corot
     /// </summary>
     public partial class MainWindow : Window
     {
+        public int Day = 0;
+        public int People = 0;
+        public int Food = 0;
+
         public MainWindow()
         {
             InitializeComponent();
-            //Just A test
-            //Brandon Test
-            //Chan Chan test
         }
+
     }
 }

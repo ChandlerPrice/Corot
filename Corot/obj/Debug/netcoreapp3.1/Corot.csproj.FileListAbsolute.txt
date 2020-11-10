@@ -1,19 +1,19 @@
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.exe
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.deps.json
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.json
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.dev.json
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.dll
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.pdb
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.g.cs
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\App.g.cs
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.cache
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.lref
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.baml
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.g.resources
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.AssemblyInfoInputs.cache
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.AssemblyInfo.cs
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.CoreCompileInputs.cache
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
-C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.genruntimeconfig.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.exe
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.deps.json
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.json
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.dev.json
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.pdb
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.lref
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.g.resources
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.AssemblyInfoInputs.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.AssemblyInfo.cs
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.CoreCompileInputs.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.genruntimeconfig.cache
