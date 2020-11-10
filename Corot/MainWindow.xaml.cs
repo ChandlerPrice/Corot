@@ -23,6 +23,7 @@ namespace Corot
         public MainWindow()
         {
             InitializeComponent();
+            //Just A test
         }
     }
 }
