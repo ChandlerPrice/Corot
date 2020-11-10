@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStyle="None">
     <Grid>
-
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_TownName">
+            </MenuItem>
+            <MenuItem Header="_People">
+            </MenuItem>
+            <MenuItem Header="_Food">
+            </MenuItem>
+            <MenuItem Header="_Happiness">
+            </MenuItem>
+            <MenuItem Header="_Day">
+            </MenuItem>
+        </Menu>
     </Grid>
 </Window>
