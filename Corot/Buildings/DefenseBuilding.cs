@@ -6,5 +6,17 @@ namespace Corot.Buildings
 {
     class DefenseBuilding
     {
+
     }
+
+    class WatchTower : DefenseBuilding
+    {
+
+    }
+
+    class Armory : DefenseBuilding
+    {
+
+    }
+
 }

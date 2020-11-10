@@ -8,4 +8,19 @@ namespace Corot
     {
         
     }
+
+    class Farm : ResourceBuilding
+    {
+
+    }
+
+    class SawMill : ResourceBuilding
+    {
+
+    }
+
+    class WaterPlant : ResourceBuilding
+    {
+
+    }
 }
