@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Gage Somerville\\.nuget\\packages\\": {}
+    "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+      "projectUniqueName": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
       "projectName": "Corot",
-      "projectPath": "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
-      "packagesPath": "C:\\Users\\Gage Somerville\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gage Somerville\\Source\\Repos\\Corot\\Corot\\obj\\",
+      "projectPath": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
+      "packagesPath": "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Gage Somerville\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Brandon Goldsworthy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
