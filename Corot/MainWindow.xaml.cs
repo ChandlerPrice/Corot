@@ -36,5 +36,10 @@ namespace Corot
             //Call random events
             //Remove food
         }
+
+        public void Exit(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

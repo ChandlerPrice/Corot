@@ -14,8 +14,9 @@
             <MenuItem Header="_People"/>
             <MenuItem Header="_Food"/>
             <MenuItem  x:Name="dayHeader" Header="_Day #1">
-                <MenuItem Header="Next Day" Click="NextDay"/>
+            <MenuItem Header="Next Day" Click="NextDay"/>
             </MenuItem>
+            <MenuItem Header="_Exit" Click="Exit"/>
         </Menu>
     </Grid>
 </Window>
