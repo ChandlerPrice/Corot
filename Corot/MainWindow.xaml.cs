@@ -24,6 +24,8 @@ namespace Corot
         {
             InitializeComponent();
             //Just A test
+            //Brandon Test
+            //Chan Chan test
         }
     }
 }
