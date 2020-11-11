@@ -79,6 +79,16 @@ namespace Corot
 
             townPopulation.Add(p1);
             townPopulation.Add(p2);
+            Console.WriteLine(townPopulation);
+
+            int totalPopulation = 1;
+
+            for (int i=0; i <= totalPopulation; i++)
+            {
+                People person = new People();
+                townPopulation.Add(person);
+            }
+            Console.WriteLine(townPopulation);
         }
     }
 }
