@@ -11,7 +11,13 @@
     <Grid>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_TownName"/>
-            <MenuItem x:Name="populationHeader" Header="Population #1"/>
+            <MenuItem x:Name="populationHeader" Header="Population #1">
+                <MenuItem x:Name="P1" Header=""/>
+                <MenuItem x:Name="P2" Header=""/>
+                <MenuItem x:Name="P3" Header=""/>
+                <MenuItem x:Name="P4" Header=""/>
+                <MenuItem x:Name="P5" Header=""/>
+            </MenuItem>
             <MenuItem x:Name="foodHeader" Header="Food #5"/>
             <MenuItem  x:Name="dayHeader" Header="Day #1">
                 <MenuItem Header="Next Day" Click="NextDay"/>

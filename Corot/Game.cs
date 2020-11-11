@@ -11,6 +11,9 @@ namespace Corot
         private int Day;
         private int Population;
         private int Food;
+
+        public List<People> townPopulation = new List<People>();
+
         public int day { get { return Day; } set { Day = value; } }
         public int population { get { return Population; } set { Population = value; } }
         public int food { get { return Food; } set { Food = value; } }

@@ -38,7 +38,12 @@ namespace Corot
             game.day = game.day + 1;
             dayHeader.Header = ("Day #" + game.day);
             foodHeader.Header = ("Food #" + game.food);
+
+            Population();
             populationHeader.Header = ("Population #" + game.population);
+
+            P1.Header = (game.townPopulation[0].GetType().Name);
+            P2.Header = (game.townPopulation[1].GetType().Name);
 
             //Call random events
             game.DailyEvent();
@@ -72,11 +77,14 @@ namespace Corot
 
         public void Population()
         {
-            List<People> townPopulation = new List<People>();
-
             People p1 = new People(2, 2, 2, 2, 2, true, false, 0, "N/A", "N/A");
             People p2 = new People();
 
+<<<<<<< HEAD
+            game.townPopulation.Add(p1);
+            game.townPopulation.Add(p2);
+            game.population = game.townPopulation.Count();
+=======
             townPopulation.Add(p1);
             townPopulation.Add(p2);
             Console.WriteLine(townPopulation);
@@ -89,6 +97,10 @@ namespace Corot
                 townPopulation.Add(person);
             }
             Console.WriteLine(townPopulation);
+<<<<<<< Updated upstream
+=======
+>>>>>>> 4d1a5fb8f007e0acc1b85c2429af97e528b29981
+>>>>>>> Stashed changes
         }
     }
 }
