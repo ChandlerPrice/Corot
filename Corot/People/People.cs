@@ -6,19 +6,19 @@ namespace Corot.People
 {
     abstract class People
     {
-        //Stats
+        //Stats 0-?
         int engineering;
         int combat;
         int medical;
         int scavenging;
         int leadership;
 
-        //Modifiers
+        //Modifiers 
         bool alive;
         bool injured;
         int special;
 
-        //Equiptment
+        //Equipment
         string weapon;
         string tool;
 

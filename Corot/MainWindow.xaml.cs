@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Corot.Events;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,26 +21,54 @@ namespace Corot
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int Day = 1;
-        public int People = 0;
-        public int Food = 0;
+        Game game;
 
         public MainWindow()
         {
             InitializeComponent();
+            game = new Game();
+            game.day = 1;
+            game.population = 1;
+            game.food = 5;
         }
 
-        public void NextDay(Object sender, RoutedEventArgs e)
+        public void NextDay(object sender, RoutedEventArgs e)
         {
-            Day++;
-            dayHeader.Header = ("Day #" + Day);
+            //Update Day
+            game.day = game.day + 1;
+            dayHeader.Header = ("Day #" + game.day);
+            foodHeader.Header = ("Food #" + game.food);
+            populationHeader.Header = ("Population #" + game.population);
+
             //Call random events
+            game.DailyEvent();
+
             //Remove food
+            if (game.food < game.population)
+            {
+
+            }
+            else
+            {
+                game.food -= game.population;
+            }
+
         }
 
         public void Exit(object sender, RoutedEventArgs e)
         {
+            /*
+            MESSAGE BOX ASK TO CLOSE
+
+            var result = MessageBox.Show("Your progress will not be saved!", "ARE YOU SURE YOU WANT TO EXIT?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)    
+            {
+                Close();
+            }
+             */
             Close();
+
         }
     }
 }
