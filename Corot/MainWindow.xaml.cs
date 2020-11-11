@@ -68,7 +68,17 @@ namespace Corot
             }
              */
             Close();
+        }
 
+        public void Population()
+        {
+            List<People> townPopulation = new List<People>();
+
+            People p1 = new People(2, 2, 2, 2, 2, true, false, 0, "N/A", "N/A");
+            People p2 = new People();
+
+            townPopulation.Add(p1);
+            townPopulation.Add(p2);
         }
     }
 }
