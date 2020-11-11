@@ -27,8 +27,9 @@ namespace Corot
         {
             InitializeComponent();
             game = new Game();
+
             game.day = 1;
-            game.population = 1;
+            game.population = 2;
             game.food = 5;
         }
 
@@ -41,9 +42,16 @@ namespace Corot
 
             Population();
             populationHeader.Header = ("Population #" + game.population);
+            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
 
-            P1.Header = (game.townPopulation[0].GetType().Name);
-            P2.Header = (game.townPopulation[1].GetType().Name);
+            newExistMenuItem.Items.Clear();
+
+            for (int i = 0; i < game.population; i++)
+            {
+                MenuItem newMenuItem2 = new MenuItem();
+                newMenuItem2.Header = game.townPopulation[i].GetType().Name;
+                newExistMenuItem.Items.Add(newMenuItem2);
+            }
 
             //Call random events
             game.DailyEvent();
@@ -77,30 +85,15 @@ namespace Corot
 
         public void Population()
         {
-            People p1 = new People(2, 2, 2, 2, 2, true, false, 0, "N/A", "N/A");
-            People p2 = new People();
-
-<<<<<<< HEAD
-            game.townPopulation.Add(p1);
-            game.townPopulation.Add(p2);
-            game.population = game.townPopulation.Count();
-=======
-            townPopulation.Add(p1);
-            townPopulation.Add(p2);
-            Console.WriteLine(townPopulation);
-
-            int totalPopulation = 1;
-
-            for (int i=0; i <= totalPopulation; i++)
+            for (int i=0; i <= game.population; i++)
             {
                 People person = new People();
-                townPopulation.Add(person);
+                game.townPopulation.Add(person);
             }
-            Console.WriteLine(townPopulation);
-<<<<<<< Updated upstream
-=======
->>>>>>> 4d1a5fb8f007e0acc1b85c2429af97e528b29981
->>>>>>> Stashed changes
+
+            game.population = game.townPopulation.Count();
+
+            Console.WriteLine(game.townPopulation);
         }
     }
 }
