@@ -17,3 +17,10 @@ C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.genruntimeconfig.cache
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.cache
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.lref
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
+C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
