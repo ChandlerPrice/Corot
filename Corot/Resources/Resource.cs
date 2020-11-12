@@ -6,8 +6,8 @@ namespace Corot
 {
     class Resource
     {
-        public int food = 0;
-        public int water = 0;
-        public int buildingMaterials = 0;
+        public int food { get; set; }
+        public int water { get; set; }
+        public int buildingMaterials { get; set; }
     }
 }

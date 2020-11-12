@@ -12,7 +12,7 @@ namespace Corot
 
     class Farm : ResourceBuilding
     {
-       resource.food = 1;
+       
 
     }
 
