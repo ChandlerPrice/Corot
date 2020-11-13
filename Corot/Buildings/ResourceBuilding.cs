@@ -4,21 +4,21 @@ using System.Text;
 
 namespace Corot
 {
+        
     class ResourceBuilding
     {
-        
-
+        Resource resource;
     }
 
     class Farm : ResourceBuilding
     {
-        
+       
 
     }
 
     class SawMill : ResourceBuilding
     {
-
+       
 
     }
 
