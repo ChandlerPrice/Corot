@@ -22,6 +22,7 @@ namespace Corot
     public partial class MainWindow : Window
     {
         Game game;
+        BaseDefense baseDefence = new BaseDefense();
 
         public MainWindow()
         {
@@ -39,6 +40,7 @@ namespace Corot
             game.day = game.day + 1;
             dayHeader.Header = ("Day #" + game.day);
             foodHeader.Header = ("Food #" + game.food);
+            baseDefence.calculateDefense();
 
             Population();
             populationHeader.Header = ("Population #" + game.population);
