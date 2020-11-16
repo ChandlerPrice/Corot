@@ -27,8 +27,9 @@ namespace Corot
         {
             InitializeComponent();
             game = new Game();
+
             game.day = 1;
-            game.population = 1;
+            game.population = 2;
             game.food = 5;
         }
 
@@ -38,7 +39,19 @@ namespace Corot
             game.day = game.day + 1;
             dayHeader.Header = ("Day #" + game.day);
             foodHeader.Header = ("Food #" + game.food);
+
+            Population();
             populationHeader.Header = ("Population #" + game.population);
+            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
+
+            newExistMenuItem.Items.Clear();
+
+            for (int i = 0; i < game.population; i++)
+            {
+                MenuItem newMenuItem2 = new MenuItem();
+                newMenuItem2.Header = game.townPopulation[i].GetType().Name;
+                newExistMenuItem.Items.Add(newMenuItem2);
+            }
 
             //Call random events
             game.DailyEvent();
@@ -72,23 +85,15 @@ namespace Corot
 
         public void Population()
         {
-            List<People> townPopulation = new List<People>();
-
-            People p1 = new People(2, 2, 2, 2, 2, true, false, 0, "N/A", "N/A");
-            People p2 = new People();
-
-            townPopulation.Add(p1);
-            townPopulation.Add(p2);
-            Console.WriteLine(townPopulation);
-
-            int totalPopulation = 1;
-
-            for (int i=0; i <= totalPopulation; i++)
+            for (int i=0; i <= game.population; i++)
             {
                 People person = new People();
-                townPopulation.Add(person);
+                game.townPopulation.Add(person);
             }
-            Console.WriteLine(townPopulation);
+
+            game.population = game.townPopulation.Count();
+
+            Console.WriteLine(game.townPopulation);
         }
     }
 }
