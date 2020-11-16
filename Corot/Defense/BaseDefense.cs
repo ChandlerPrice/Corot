@@ -8,7 +8,7 @@ namespace Corot
     {
         Game game = new Game();
 
-        int defense = 0;
+        int defense;
         //int zombies;
         //int horde;
 
@@ -25,7 +25,7 @@ namespace Corot
             }
             else
             {
-                Console.WriteLine("NO PEOPLE");
+                Console.WriteLine("No People in list");
             }
             Console.WriteLine($"Defense: {defense}");
             return defense;
