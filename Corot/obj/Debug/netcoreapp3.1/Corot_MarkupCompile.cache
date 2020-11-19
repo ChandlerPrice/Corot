@@ -1,18 +1,26 @@
 ﻿Corot
 
 
-winexe
+exe
 C#
 .cs
-C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\
 Corot
 none
 false
+<<<<<<< HEAD
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\App.xaml
 11151548125
 
 12711428377
+=======
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\App.xaml
+11151548125
+
+13-513454513
+>>>>>>> 898ccdc54eaefb81a1558776a8231dc1efd4cc4b
 1921654412462
 MainWindow.xaml;
 

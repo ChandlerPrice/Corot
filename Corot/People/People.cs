@@ -8,11 +8,11 @@ namespace Corot
     {
         public People()
         {
-            engineering = 0;
-            combat = 0;
-            medical = 0;
-            scavenging = 0;
-            leadership = 0;
+            engineering = 1;
+            combat = 1;
+            medical = 1;
+            scavenging = 1;
+            leadership = 1;
             alive = true;
             injured = false;
             special = 0;
