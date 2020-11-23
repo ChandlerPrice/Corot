@@ -10,4 +10,23 @@
     <Folder Include="Controls\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Items\Item_Data.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Item_Data.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Items\Item_Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Item_Data.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
 </Project>
