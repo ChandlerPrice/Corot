@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj": {}
+    "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj": {
+    "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
+        "projectUniqueName": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
         "projectName": "Corot",
-        "projectPath": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
-        "packagesPath": "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\obj\\",
+        "projectPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
+        "packagesPath": "C:\\Users\\Chandler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Brandon Goldsworthy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chandler\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -55,7 +57,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
