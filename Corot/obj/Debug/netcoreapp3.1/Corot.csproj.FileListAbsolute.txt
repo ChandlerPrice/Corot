@@ -43,3 +43,10 @@ C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Debug\netcoreapp3.1\Corot_Ma
 C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.lref
 C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Debug\netcoreapp3.1\Corot.dll
 C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.CopyComplete
