@@ -61,17 +61,27 @@
             <Button Grid.Column="0" Grid.Row="2">Button 1</Button>
             <Button Grid.Column="1" Grid.Row="2">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="2">Button 3</Button>
-            <Button Grid.Column="3" Grid.Row="2">Button 4</Button>
-            <Button Grid.Column="4" Grid.Row="2">Button 5</Button>
+            <Button Grid.Column="3" Grid.Row="2">
+                <Image Source="Images/ResourceBuildingImage.png"/>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="2">
+                <Image Source="Images/HospitalBuildingImage.png"/>
+            </Button>
             <Button Grid.Column="5" Grid.Row="2">Button 6</Button>
             <Button Grid.Column="6" Grid.Row="2">Button 7</Button>
             <Button Grid.Column="7" Grid.Row="2">Button 8</Button>
             
             <Button Grid.Column="0" Grid.Row="3">Button 1</Button>
             <Button Grid.Column="1" Grid.Row="3">Button 2</Button>
-            <Button Grid.Column="2" Grid.Row="3">Button 3</Button>
-            <Button Grid.Column="3" Grid.Row="3">Button 4</Button>
-            <Button Grid.Column="4" Grid.Row="3">Button 5</Button>
+            <Button Grid.Column="2" Grid.Row="3">
+                
+            </Button>
+            <Button Grid.Column="3" Grid.Row="3">
+                <Image Source="Images/HousingBuildingImage.png"/>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="3">
+                <Image Source="Images/DefenseBuildingImage.jpg"/>
+            </Button>
             <Button Grid.Column="5" Grid.Row="3">Button 6</Button>
             <Button Grid.Column="6" Grid.Row="3">Button 7</Button>
             <Button Grid.Column="7" Grid.Row="3">Button 8</Button>
