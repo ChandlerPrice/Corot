@@ -1,19 +1,19 @@
 ﻿Corot
 
 
-winexe
+exe
 C#
 .cs
-C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Release\netcoreapp3.1\
+C:\Users\Brandon Goldsworthy\source\repos\ChandlerPrice\Corot\Corot\obj\Release\netcoreapp3.1\
 Corot
 none
 false
-TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Gage Somerville\Desktop\Projects\Corot\App.xaml
+TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1
+C:\Users\Brandon Goldsworthy\source\repos\ChandlerPrice\Corot\Corot\App.xaml
 11151548125
 
 15154953849
-1931692930280
+193442108300
 MainWindow.xaml;
 
 True
