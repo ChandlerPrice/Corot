@@ -117,9 +117,15 @@ namespace Corot
             {
                 Game.townPopulation.Add(person);
             }
+<<<<<<< Updated upstream
 
             game.population = Game.townPopulation.Count();
             Console.WriteLine(Game.townPopulation);
+=======
+            game.population = game.townPopulation.Count();
+
+            Console.WriteLine(game.townPopulation);
+>>>>>>> Stashed changes
         }
     }
 }
