@@ -118,8 +118,12 @@ namespace Corot
             {
                 game.townPopulation.Add(person);
             }
+<<<<<<< Updated upstream
 
             Game.townPopulation.Count() = game.townPopulation.Count();
+=======
+            game.population = game.townPopulation.Count();
+>>>>>>> Stashed changes
 
             Console.WriteLine(game.townPopulation);
         }
