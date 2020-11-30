@@ -6,6 +6,6 @@ namespace Corot.Research
 {
     class Research
     {
-
+        protected int researchPoints { get; set; }
     }
 }

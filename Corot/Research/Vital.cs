@@ -6,6 +6,8 @@ namespace Corot.Research
 {
     class Vital : Research
     {
+        bool vitalZombieVitals;
+        bool vitalHeadshot;
 
     }
 }
