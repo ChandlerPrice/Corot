@@ -6,12 +6,13 @@
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowState="Maximized"
+        WindowState="Normal"
         WindowStyle="None">
     <Grid>
-        <Menu x:Name="MainMenu" DockPanel.Dock="Top">
+        <Border BorderBrush="Black" BorderThickness="1"/>
+        <Menu x:Name="MainMenu" DockPanel.Dock="Top" >
             <MenuItem Header="_TownName"/>
-            <MenuItem x:Name="populationHeader" Header="Population #2">
+            <MenuItem x:Name="populationHeader" Header="Population #4" >
             </MenuItem>
             <MenuItem x:Name="foodHeader" Header="Food #5"/>
             <MenuItem  x:Name="dayHeader" Header="Day #1">
@@ -19,5 +20,89 @@
             </MenuItem>
             <MenuItem Header="_Exit" Click="Exit"/>
         </Menu>
+        <Grid Margin="0, 20, 0, 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            
+            <Button Grid.Column="0">Button 1</Button>
+            <Button Grid.Column="1">Button 2</Button>
+            <Button Grid.Column="2">Button 3</Button>
+            <Button Grid.Column="3">Button 4</Button>
+            <Button Grid.Column="4">Button 5</Button>
+            <Button Grid.Column="5">Button 6</Button>
+            <Button Grid.Column="6">Button 7</Button>
+            <Button Grid.Column="7">Button 8</Button>
+
+            <Button Grid.Column="0" Grid.Row="1">Button 1</Button>
+            <Button Grid.Column="1" Grid.Row="1">Button 2</Button>
+            <Button Grid.Column="2" Grid.Row="1">Button 3</Button>
+            <Button Grid.Column="3" Grid.Row="1">Button 4</Button>
+            <Button Grid.Column="4" Grid.Row="1">Button 5</Button>
+            <Button Grid.Column="5" Grid.Row="1">Button 6</Button>
+            <Button Grid.Column="6" Grid.Row="1">Button 7</Button>
+            <Button Grid.Column="7" Grid.Row="1">Button 8</Button>
+
+            <Button Grid.Column="0" Grid.Row="2">Button 1</Button>
+            <Button Grid.Column="1" Grid.Row="2">Button 2</Button>
+            <Button Grid.Column="2" Grid.Row="2">Button 3</Button>
+            <Button Grid.Column="3" Grid.Row="2">
+                <Image Source="Images/ResourceBuildingImage.png"/>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="2">
+                <Image Source="Images/HospitalBuildingImage.png"/>
+            </Button>
+            <Button Grid.Column="5" Grid.Row="2">Button 6</Button>
+            <Button Grid.Column="6" Grid.Row="2">Button 7</Button>
+            <Button Grid.Column="7" Grid.Row="2">Button 8</Button>
+            
+            <Button Grid.Column="0" Grid.Row="3">Button 1</Button>
+            <Button Grid.Column="1" Grid.Row="3">Button 2</Button>
+            <Button Grid.Column="2" Grid.Row="3">
+                
+            </Button>
+            <Button Grid.Column="3" Grid.Row="3">
+                <Image Source="Images/HousingBuildingImage.png"/>
+            </Button>
+            <Button Grid.Column="4" Grid.Row="3">
+                <Image Source="Images/DefenseBuildingImage.jpg"/>
+            </Button>
+            <Button Grid.Column="5" Grid.Row="3">Button 6</Button>
+            <Button Grid.Column="6" Grid.Row="3">Button 7</Button>
+            <Button Grid.Column="7" Grid.Row="3">Button 8</Button>
+
+            <Button Grid.Column="0" Grid.Row="4">Button 1</Button>
+            <Button Grid.Column="1" Grid.Row="4">Button 2</Button>
+            <Button Grid.Column="2" Grid.Row="4">Button 3</Button>
+            <Button Grid.Column="3" Grid.Row="4">Button 4</Button>
+            <Button Grid.Column="4" Grid.Row="4">Button 5</Button>
+            <Button Grid.Column="5" Grid.Row="4">Button 6</Button>
+            <Button Grid.Column="6" Grid.Row="4">Button 7</Button>
+            <Button Grid.Column="7" Grid.Row="4">Button 8</Button>
+            
+            <Button Grid.Column="0" Grid.Row="5">Button 1</Button>
+            <Button Grid.Column="1" Grid.Row="5">Button 2</Button>
+            <Button Grid.Column="2" Grid.Row="5">Button 3</Button>
+            <Button Grid.Column="3" Grid.Row="5">Button 4</Button>
+            <Button Grid.Column="4" Grid.Row="5">Button 5</Button>
+            <Button Grid.Column="5" Grid.Row="5">Button 6</Button>
+            <Button Grid.Column="6" Grid.Row="5">Button 7</Button>
+            <Button Grid.Column="7" Grid.Row="5">Button 8</Button>
+        </Grid>
     </Grid>
 </Window>

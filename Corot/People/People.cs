@@ -8,20 +8,23 @@ namespace Corot
     {
         public People()
         {
-            engineering = 0;
-            combat = 0;
-            medical = 0;
-            scavenging = 0;
-            leadership = 0;
+            name = "Bob";
+            engineering = 1;
+            combat = 1;
+            medical = 1;
+            scavenging = 1;
+            leadership = 1;
             alive = true;
             injured = false;
             special = 0;
             weapon = "N/A";
             tool = "N/A";
+            idle = false;
         }
 
-        public People(int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool)
+        public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, bool idle)
         {
+            this.name = name;
             this.engineering = engineering;
             this.combat = combat;
             this.medical = medical;
@@ -32,23 +35,28 @@ namespace Corot
             this.special = special;
             this.weapon = weapon;
             this.tool = tool;
+            this.idle = idle;
         }
 
 
         //Stats 0-20
-       protected int engineering;
-       protected int combat;
-       protected int medical;
-       protected int scavenging;
-       protected int leadership;
+       public int engineering { get; set; }
+       public int combat { get; set; }
+       public int medical { get; set; }
+       public int scavenging { get; set; }
+       public int leadership { get; set; }
 
         //Modifiers 
-       protected bool alive;
-       protected bool injured;
-       protected int special;
+        public bool alive { get; set; }
+        public bool injured { get; set; }
+        public int special { get; set; }
+        public bool idle { get; set; }
 
         //Equipment
-       protected string weapon;
-       protected string tool;
+        public string weapon { get; set; }
+        public string tool { get; set; }
+
+        //Other
+        public string name { get; set; }
     }
 }
