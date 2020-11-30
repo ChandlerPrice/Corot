@@ -1,6 +1,22 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
+    "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+        "projectName": "Corot",
+        "projectPath": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+        "packagesPath": "C:\\Users\\Spencer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Spencer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
     "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj": {}
   },
   "projects": {
@@ -15,6 +31,7 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Chandler\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 91666d6f4cf66f7856f76ee929ccc32f7bc46173
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
