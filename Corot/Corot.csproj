@@ -7,7 +7,42 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\DefenseBuildingImage.jpg" />
+    <None Remove="Images\HospitalBuildingImage.png" />
+    <None Remove="Images\HousingBuildingImage.png" />
+    <None Remove="Images\ResearchBuildingImage.png" />
+    <None Remove="Images\ResourceBuildingImage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Controls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\HospitalBuildingImage.png" />
+    <Resource Include="Images\ResearchBuildingImage.png" />
+    <Resource Include="Images\DefenseBuildingImage.jpg" />
+    <Resource Include="Images\HousingBuildingImage.png" />
+    <Resource Include="Images\ResourceBuildingImage.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Items\Item_Data.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Item_Data.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Items\Item_Data.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Item_Data.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>

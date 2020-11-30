@@ -16,13 +16,21 @@ using System.Windows.Shapes;
 
 namespace Corot
 {
+    //TODO
+    /*
+     * Fullscreen
+     * Remove the Debug Console on launch
+     */ 
+
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
     public partial class MainWindow : Window
     {
         Game game;
         BaseDefense baseDefence = new BaseDefense();
+        People person = new People();
 
         public MainWindow()
         {
@@ -30,28 +38,45 @@ namespace Corot
             game = new Game();
 
             game.day = 1;
-            game.population = 2;
+            Game.townPopulation.Add(person);
+            Game.townPopulation.Add(person);
+            Game.townPopulation.Add(person);
+            Game.townPopulation.Add(person);
+            game.population = Game.townPopulation.Count();
             game.food = 5;
+
+            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
+
+            newExistMenuItem.Items.Clear();
+
+            for (int i = 0; i < Game.townPopulation.Count(); i++)
+            {
+                MenuItem newMenuItem2 = new MenuItem();
+                newMenuItem2.Header = Game.townPopulation[i].name;
+                newExistMenuItem.Items.Add(newMenuItem2);
+            }
+
         }
 
         public void NextDay(object sender, RoutedEventArgs e)
         {
             //Update Day
+            Console.WriteLine($"Day {game.day}\n~~~~~~~\n");
             game.day = game.day + 1;
             dayHeader.Header = ("Day #" + game.day);
             foodHeader.Header = ("Food #" + game.food);
             baseDefence.calculateDefense();
 
             Population();
-            populationHeader.Header = ("Population #" + game.population);
+            populationHeader.Header = ("Population #" + Game.townPopulation.Count());
             MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
 
             newExistMenuItem.Items.Clear();
 
-            for (int i = 0; i < game.population; i++)
+            for (int i = 0; i < Game.townPopulation.Count(); i++)
             {
                 MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = game.townPopulation[i].GetType().Name;
+                newMenuItem2.Header = Game.townPopulation[i].name;
                 newExistMenuItem.Items.Add(newMenuItem2);
             }
 
@@ -59,13 +84,13 @@ namespace Corot
             game.DailyEvent();
 
             //Remove food
-            if (game.food < game.population)
+            if (game.food < Game.townPopulation.Count())
             {
 
             }
             else
             {
-                game.food -= game.population;
+                game.food -= Game.townPopulation.Count();
             }
 
         }
@@ -85,17 +110,16 @@ namespace Corot
             Close();
         }
 
+        //Suppost to be a list of the people in the town
         public void Population()
         {
             for (int i=0; i <= game.population; i++)
             {
-                People person = new People();
-                game.townPopulation.Add(person);
+                Game.townPopulation.Add(person);
             }
 
-            game.population = game.townPopulation.Count();
-
-            Console.WriteLine(game.townPopulation);
+            game.population = Game.townPopulation.Count();
+            Console.WriteLine(Game.townPopulation);
         }
     }
 }
