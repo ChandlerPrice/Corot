@@ -9,17 +9,15 @@
         WindowState="Maximized"
         WindowStyle="None">
     <Grid>
-        <Menu DockPanel.Dock="Top">
-            <MenuItem Header="_TownName">
+        <Menu x:Name="MainMenu" DockPanel.Dock="Top">
+            <MenuItem Header="_TownName"/>
+            <MenuItem x:Name="populationHeader" Header="Population #2">
             </MenuItem>
-            <MenuItem Header="_People">
+            <MenuItem x:Name="foodHeader" Header="Food #5"/>
+            <MenuItem  x:Name="dayHeader" Header="Day #1">
+                <MenuItem Header="Next Day" Click="NextDay"/>
             </MenuItem>
-            <MenuItem Header="_Food">
-            </MenuItem>
-            <MenuItem Header="_Happiness">
-            </MenuItem>
-            <MenuItem Header="_Day">
-            </MenuItem>
+            <MenuItem Header="_Exit" Click="Exit"/>
         </Menu>
     </Grid>
 </Window>
