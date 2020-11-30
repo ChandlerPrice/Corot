@@ -67,7 +67,7 @@ namespace Corot
             foodHeader.Header = ("Food #" + game.food);
             baseDefence.calculateDefense();
 
-            //Population();
+            Population();
             populationHeader.Header = ("Population #" + Game.townPopulation.Count());
             MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
 
@@ -76,7 +76,7 @@ namespace Corot
             for (int i = 0; i < Game.townPopulation.Count(); i++)
             {
                 MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = Game.townPopulation[i].GetType().Name;
+                newMenuItem2.Header = Game.townPopulation[i].name;
                 newExistMenuItem.Items.Add(newMenuItem2);
             }
 
@@ -111,22 +111,15 @@ namespace Corot
         }
 
         //Suppost to be a list of the people in the town
-        /*
         public void Population()
         {
-            for (int i=0; i <= Game.townPopulation.Count(); i++)
+            for (int i=0; i <= game.population; i++)
             {
-                game.townPopulation.Add(person);
+                Game.townPopulation.Add(person);
             }
-<<<<<<< Updated upstream
 
-            Game.townPopulation.Count() = game.townPopulation.Count();
-=======
-            game.population = game.townPopulation.Count();
->>>>>>> Stashed changes
-
-            Console.WriteLine(game.townPopulation);
+            game.population = Game.townPopulation.Count();
+            Console.WriteLine(Game.townPopulation);
         }
-        */
     }
 }
