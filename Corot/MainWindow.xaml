@@ -6,13 +6,13 @@
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        WindowState="Maximized"
+        WindowState="Normal"
         WindowStyle="None">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1"/>
         <Menu x:Name="MainMenu" DockPanel.Dock="Top" >
             <MenuItem Header="_TownName"/>
-            <MenuItem x:Name="populationHeader" Header="Population #2" >
+            <MenuItem x:Name="populationHeader" Header="Population #4" >
             </MenuItem>
             <MenuItem x:Name="foodHeader" Header="Food #5"/>
             <MenuItem  x:Name="dayHeader" Header="Day #1">

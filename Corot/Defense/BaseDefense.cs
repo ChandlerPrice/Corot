@@ -6,29 +6,51 @@ namespace Corot
 {
     class BaseDefense
     {
-        Game game = new Game();
 
         int defense;
-        //int zombies;
+        int zombies = 50;
         //int horde;
+        int buildings = 4;
+        int defenseBuildings = 1;
+        int danger = 0;
+        List<People> idlePeople = new List<People>();
+
+
 
         public int calculateDefense()
         {
             //Defense is calculated as each person that is idle/ on guard duty & their combat skills, as well as the defense of certain buildings plus the flat bonus of wall quality
-            defense = 1;
-            if (game.population > 0)
+            defense = 1 + buildings + (defenseBuildings * 8);
+            for (int i = 0; i < Game.townPopulation.Count; i++)
             {
-                foreach (People element in game.townPopulation)
+                if (Game.townPopulation[i].idle)
                 {
-                    Console.WriteLine($"Person: {element}");
+                    idlePeople.Add(Game.townPopulation[i]);
                 }
+
+
+
             }
-            else
+
+            if (Game.townPopulation.Count <= 0)
             {
                 Console.WriteLine("No People in list");
             }
-            Console.WriteLine($"Defense: {defense}");
-            return defense;
+            else
+            {
+                //listObj[index].[property]
+                for (int i=0; i < idlePeople.Count; i++)
+                {
+                    defense = defense + idlePeople[i].combat;
+                    Console.WriteLine($"Defense: {defense}");
+                }
+            }
+            Console.WriteLine($"Total Defense: {defense}");
+
+            danger = zombies / (defense * 2);
+
+            Console.WriteLine($"Danger: {danger}");
+            return danger;
         }
 
     }
