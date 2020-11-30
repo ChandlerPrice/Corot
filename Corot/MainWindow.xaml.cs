@@ -76,7 +76,7 @@ namespace Corot
             for (int i = 0; i < Game.townPopulation.Count(); i++)
             {
                 MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = Game.townPopulation[i].GetType().Name;
+                newMenuItem2.Header = Game.townPopulation[i].name;
                 newExistMenuItem.Items.Add(newMenuItem2);
             }
 
