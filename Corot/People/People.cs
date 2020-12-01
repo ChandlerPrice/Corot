@@ -10,7 +10,8 @@ namespace Corot.People
         int randName;
         public People()
         {
-            randName = random.Next(10);
+            randName = random.Next(1, 10);
+
             switch (randName)
             {
                 case 1:
@@ -42,8 +43,6 @@ namespace Corot.People
                     break;
                 case 10:
                     name = Names.Tatheim.ToString();
-                    break;
-                default:
                     break;
             }
             engineering = 1;

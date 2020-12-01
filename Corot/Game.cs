@@ -9,7 +9,6 @@ namespace Corot
     class Game
     {
         private Random rand = new Random();
-        Corot.People.People person = new Corot.People.People();
         private int Day;
         private int Population;
         private int Food;
@@ -35,20 +34,22 @@ namespace Corot
                 case randomDailyEventsEnum.zombieHordeAttack:
                     break;
                 case randomDailyEventsEnum.survivorDied:
-                    //Population -= rand.Next(3);
                     for (int i=0; i < 3; i++)
                     {
                         randomValue = rand.Next(townPopulation.Count);
                         System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
-                        Game.townPopulation.RemoveAt(randomValue);
+                        if (townPopulation.Count > 0)
+                        {
+                                Game.townPopulation.RemoveAt(randomValue);
+                        }
                     }
 
                     System.Diagnostics.Debug.WriteLine($"Population: {population}");
                     break;
                 case randomDailyEventsEnum.survivorFound:
-                    //Population += rand.Next(3);
                     for (int i = 0; i < 3; i++)
                     {
+                        Corot.People.People person = new Corot.People.People();
                         Game.townPopulation.Add(person);
                     }
                     System.Diagnostics.Debug.WriteLine("New people added");
@@ -66,7 +67,6 @@ namespace Corot
                     break;
             }
         }
-
         public void Research()
         {
             switch (Corot.Research.Research.activeResearch)
