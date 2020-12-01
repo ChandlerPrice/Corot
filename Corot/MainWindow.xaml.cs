@@ -40,7 +40,6 @@ namespace Corot
         {
             InitializeComponent();
             game = new Game();
-
             game.day = 1;
             textBox.Text = "DAY #" + game.day;
             for (int i=0;i<4; i++)
@@ -48,6 +47,7 @@ namespace Corot
                 Corot.People.People person = new Corot.People.People();
                 Game.townPopulation.Add(person);
             }
+            UpdatePeopleList();
             game.population = Game.townPopulation.Count();
             game.food = 5;
 
@@ -64,8 +64,19 @@ namespace Corot
 
         }
 
+        private void UpdatePeopleList()
+        {
+            peopleListBox.Items.Clear();
+            for (int i=0;i < Game.townPopulation.Count; i++)
+            {
+                peopleListBox.Items.Add(Game.townPopulation[i].name);
+            }
+        }
+
+
         public void NextDay(object sender, RoutedEventArgs e)
         {
+            UpdatePeopleList();
             countPeople();
             if (game.population <= 0)
             {
@@ -96,6 +107,7 @@ namespace Corot
             //Call random events
             textBox.Text = ($"Day #{game.day}") + game.DailyEvent();
             countPeople();
+            UpdatePeopleList();
             foodHeader.Header = ($"Food #{game.food}");
         }
 
@@ -124,6 +136,11 @@ namespace Corot
 
             game.population = Game.townPopulation.Count();
             System.Diagnostics.Debug.WriteLine($"Population: {game.population}");
+        }
+
+        public void updateListView()
+        {
+
         }
 
         public void countPeople()
@@ -222,5 +239,9 @@ namespace Corot
             Corot.Research.Research.activeResearch = "fortifyWalls";
         }
 
+        private void peopleList_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

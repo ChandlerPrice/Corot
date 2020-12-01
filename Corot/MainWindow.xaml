@@ -174,8 +174,11 @@
         <Grid Grid.Column="1" Width="200" HorizontalAlignment="Right" Margin="0, 20, 0, 0">
             <Border BorderBrush="Gray" BorderThickness="100"/>
             <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
-            <Button Height="50" Content="NEXT DAY" Margin="0, 250, 0, 0" VerticalAlignment="Top" Click="NextDay"/>
-            <Button Height="50" Content="EXIT" Margin="0, 300, 0, 0" VerticalAlignment="Top" Click="Exit"/>
+            <ComboBox x:Name="peopleListBox" Height="20" Margin="0,120,0,0" VerticalAlignment="Top" MaxDropDownHeight="120"/>
+            <ListView x:Name="peopleInfoList" Height="100" Margin="0,180,0,0" VerticalAlignment="Top">
+            </ListView>
+            <Button Height="50" Content="Next Day" Margin="0, 300, 0, 0" VerticalAlignment="Top" Click="NextDay"/>
+            <Button Height="50" Content="Exit" Margin="0, 350, 0, 0" VerticalAlignment="Top" Click="Exit"/>
         </Grid>
     </Grid>
 </Window>
