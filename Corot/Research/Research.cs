@@ -17,5 +17,10 @@ namespace Corot.Research
         public static bool bunkBedsComplete { get; set; } = false;
         public static bool pesticidesComplete { get; set; } = false;
         public static bool fortifyWallsComplete { get; set; } = false;
+
+        public static string activeResearch { get; set; }
+        public static int researchPoints { get; set; }
+        public static int maxResearch { get; set; }
+        public static int totalResearchDone { get; set; } = 0;
     }
 }
