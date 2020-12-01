@@ -9,7 +9,6 @@ namespace Corot
     class Game
     {
         private Random rand = new Random();
-        Corot.People.People person = new Corot.People.People();
         private int Day;
         private int Population;
         private int Food;
@@ -72,14 +71,11 @@ namespace Corot
                         break;
                     default:
                         break;
-                }
-
             }
             dailyPrint = dailyPrint + ($"   Population: {population}    ");
             dailyPrint = dailyPrint + ($"   Food: {Food}    ");
             return dailyPrint;
         }
-
         public void Research()
         {
             switch (Corot.Research.Research.activeResearch)

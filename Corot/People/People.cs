@@ -6,9 +6,45 @@ namespace Corot.People
 {
     class People
     {
+        Random random = new Random();
+        int randName;
         public People()
         {
-            name = "Bob";
+            randName = random.Next(1, 10);
+
+            switch (randName)
+            {
+                case 1:
+                    name = Names.Billy.ToString();
+                    break;
+                case 2:
+                    name = Names.Bob.ToString();
+                    break;
+                case 3:
+                    name = Names.Brandon.ToString();
+                    break;
+                case 4:
+                    name = Names.Chandler.ToString();
+                    break;
+                case 5:
+                    name = Names.Gage.ToString();
+                    break;
+                case 6:
+                    name = Names.Jack.ToString();
+                    break;
+                case 7:
+                    name = Names.John.ToString();
+                    break;
+                case 8:
+                    name = Names.Phil.ToString();
+                    break;
+                case 9:
+                    name = Names.Spencer.ToString();
+                    break;
+                case 10:
+                    name = Names.Tatheim.ToString();
+                    break;
+            }
             engineering = 1;
             combat = 1;
             medical = 1;
@@ -20,6 +56,20 @@ namespace Corot.People
             weapon = "N/A";
             tool = "N/A";
             idle = false;
+        }
+
+        public enum Names
+        {
+            Bob,
+            John,
+            Phil,
+            Jack,
+            Billy,
+            Gage,
+            Brandon,
+            Chandler,
+            Spencer,
+            Tatheim
         }
 
         public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, bool idle)

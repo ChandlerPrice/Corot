@@ -32,7 +32,7 @@ namespace Corot
     {
         Game game;
         BaseDefense baseDefence = new BaseDefense();
-        Corot.People.People person = new Corot.People.People();
+        //Corot.People.People person = new Corot.People.People();
         Random random = new Random();
         
 
@@ -43,10 +43,11 @@ namespace Corot
 
             game.day = 1;
             textBox.Text = "DAY #" + game.day;
-            Game.townPopulation.Add(person);
-            Game.townPopulation.Add(person);
-            Game.townPopulation.Add(person);
-            Game.townPopulation.Add(person);
+            for (int i=0;i<4; i++)
+            {
+                Corot.People.People person = new Corot.People.People();
+                Game.townPopulation.Add(person);
+            }
             game.population = Game.townPopulation.Count();
             game.food = 5;
 
@@ -71,8 +72,9 @@ namespace Corot
                 Close();
             }
             //Update Day
-            System.Diagnostics.Debug.WriteLine($"DAY {game.day + 1}\n~~~~~~~\n");
+            game.DailyEvent();
             game.day += 1;
+            System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
             baseDefence.calculateDefense();
             setResearch();
             game.Research();
@@ -148,6 +150,7 @@ namespace Corot
 
                     }
                 }
+                game.food = 0;
             }
         }
 
