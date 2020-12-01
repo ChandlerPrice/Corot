@@ -45,6 +45,7 @@ namespace Corot
                             System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                             Game.townPopulation.RemoveAt(randomValue);
                         }
+                        population = Game.townPopulation.Count;
 
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
@@ -52,8 +53,10 @@ namespace Corot
                         //Population += rand.Next(3);
                         for (int i = 0; i < 3; i++)
                         {
-                            Game.townPopulation.Add(person);
+                            People.People people = new People.People();
+                            Game.townPopulation.Add(people);
                         }
+                        population = Game.townPopulation.Count;
                         dailyPrint = dailyPrint + ("    New people added    ");
                         System.Diagnostics.Debug.WriteLine("New people added");
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
@@ -71,11 +74,13 @@ namespace Corot
                         break;
                     default:
                         break;
+                }
             }
             dailyPrint = dailyPrint + ($"   Population: {population}    ");
             dailyPrint = dailyPrint + ($"   Food: {Food}    ");
             return dailyPrint;
         }
+
         public void Research()
         {
             switch (Corot.Research.Research.activeResearch)

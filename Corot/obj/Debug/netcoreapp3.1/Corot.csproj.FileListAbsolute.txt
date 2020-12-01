@@ -82,3 +82,4 @@ C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.C
 C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
 C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
 C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.genruntimeconfig.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
