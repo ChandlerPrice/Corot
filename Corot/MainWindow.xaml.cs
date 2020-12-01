@@ -1,4 +1,5 @@
 ﻿using Corot.Events;
+using Corot.People;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Corot.Research;
 
 namespace Corot
 {
@@ -30,7 +32,9 @@ namespace Corot
     {
         Game game;
         BaseDefense baseDefence = new BaseDefense();
-        People person = new People();
+        Corot.People.People person = new Corot.People.People();
+        Random random = new Random();
+        
 
         public MainWindow()
         {
@@ -60,15 +64,21 @@ namespace Corot
 
         public void NextDay(object sender, RoutedEventArgs e)
         {
+            countPeople();
+            if (game.population <= 0)
+            {
+                Close();
+            }
             //Update Day
-            Console.WriteLine($"Day {game.day}\n~~~~~~~\n");
-            game.day = game.day + 1;
-            dayHeader.Header = ("Day #" + game.day);
-            foodHeader.Header = ("Food #" + game.food);
+            System.Diagnostics.Debug.WriteLine($"Day {game.day + 1}\n~~~~~~~\n");
+            game.day += 1;
             baseDefence.calculateDefense();
-
+            setResearch();
+            game.Research();
+            System.Diagnostics.Debug.WriteLine($"Research points: {Corot.Research.Research.researchPoints}");
+            System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
+            Food();
             Population();
-            populationHeader.Header = ("Population #" + Game.townPopulation.Count());
             MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
 
             newExistMenuItem.Items.Clear();
@@ -82,17 +92,9 @@ namespace Corot
 
             //Call random events
             game.DailyEvent();
-
-            //Remove food
-            if (game.food < Game.townPopulation.Count())
-            {
-
-            }
-            else
-            {
-                game.food -= Game.townPopulation.Count();
-            }
-
+            countPeople();
+            dayHeader.Header = ($"Day #{game.day}");
+            foodHeader.Header = ($"Food #{game.food}");
         }
 
         public void Exit(object sender, RoutedEventArgs e)
@@ -115,11 +117,107 @@ namespace Corot
         {
             for (int i=0; i <= game.population; i++)
             {
-                Game.townPopulation.Add(person);
+                Game.townPopulation.Count();
             }
 
             game.population = Game.townPopulation.Count();
-            Console.WriteLine(Game.townPopulation);
+            System.Diagnostics.Debug.WriteLine($"Population: {game.population}");
         }
+
+        public void countPeople()
+        {
+            game.population = Game.townPopulation.Count();
+            populationHeader.Header = ($"Population #{game.population}");
+        }
+
+        public void Food()
+        {
+            int starveChance;
+            game.population = Game.townPopulation.Count();
+            game.food -= game.population;
+            if (game.food < 0 )
+            {
+                System.Diagnostics.Debug.WriteLine("The town is starving, people are going to die from your incompetence (10% per person)");
+                for (int i = 0; i < Game.townPopulation.Count; i++)
+                {
+                    starveChance = random.Next(10);
+                    if (starveChance == 1)
+                    {
+                    System.Diagnostics.Debug.WriteLine($"Died: {i}");
+                    Game.townPopulation.RemoveAt(i);
+
+                    }
+                }
+            }
+        }
+
+        public void setResearch()
+        {
+            Corot.Research.Research.researchPoints = 0;
+
+            for (int i = 0; i < Game.townPopulation.Count; i++)
+            {
+                if (Game.townPopulation[i].idle)
+                {
+                    Corot.People.Jobs.scienceWorkers.Add(Game.townPopulation[i]);
+                }
+            }
+        }
+
+
+        private void zombieVitalClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Zombie Vitals");
+            Corot.Research.Research.activeResearch = "zombieVitals";
+        }
+
+        private void headshotClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Headshot");
+            Corot.Research.Research.activeResearch = "headshot";
+        }
+
+        private void antiVenomClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Antivenom");
+            Corot.Research.Research.activeResearch = "antivenom";
+        }
+
+        private void signsClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Signs");
+            Corot.Research.Research.activeResearch = "signs";
+        }
+
+        private void diplomacyClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Diplomacy");
+            Corot.Research.Research.activeResearch = "diplomacy";
+        }
+
+        private void radioClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Radio");
+            Corot.Research.Research.activeResearch = "radio";
+        }
+
+        private void bunkBedsClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Bunk Beds");
+            Corot.Research.Research.activeResearch = "bunkBeds";
+        }
+
+        private void pesticidesClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Pesticides");
+            Corot.Research.Research.activeResearch = "pesticides";
+        }
+
+        private void fortifyWallsClick(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("Fortify Walls");
+            Corot.Research.Research.activeResearch = "fortifyWalls";
+        }
+
     }
 }
