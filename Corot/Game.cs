@@ -20,6 +20,9 @@ namespace Corot
         public static List<People> townPopulation = new List<People>();
         public static string activeResearch { get; set; }
         public static int researchPoints { get; set; }
+        public static int maxResearch { get; set; }
+
+        public static List<People> scienceWorkers = new List<People>();
 
 
 

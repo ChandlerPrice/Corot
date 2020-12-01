@@ -34,7 +34,7 @@ namespace Corot
 
             if (Game.townPopulation.Count <= 0)
             {
-                Console.WriteLine("No People in list");
+                System.Diagnostics.Debug.WriteLine("No People in list");
             }
             else
             {
@@ -42,14 +42,14 @@ namespace Corot
                 for (int i=0; i < idlePeople.Count; i++)
                 {
                     defense = defense + idlePeople[i].combat;
-                    Console.WriteLine($"Defense: {defense}");
+                    System.Diagnostics.Debug.WriteLine($"Defense: {defense}");
                 }
             }
-            Console.WriteLine($"Total Defense: {defense}");
+            System.Diagnostics.Debug.WriteLine($"Total Defense: {defense}");
 
             danger = zombies / (defense * 2);
 
-            Console.WriteLine($"Danger: {danger}");
+            System.Diagnostics.Debug.WriteLine($"Danger: {danger}");
             return danger;
         }
 

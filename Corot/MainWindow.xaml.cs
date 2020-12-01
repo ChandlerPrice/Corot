@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Corot.Research;
 
 namespace Corot
 {
@@ -62,11 +63,13 @@ namespace Corot
         public void NextDay(object sender, RoutedEventArgs e)
         {
             //Update Day
-            Console.WriteLine($"Day {game.day}\n~~~~~~~\n");
+            System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
             game.day = game.day + 1;
             dayHeader.Header = ("Day #" + game.day);
             foodHeader.Header = ("Food #" + game.food);
             baseDefence.calculateDefense();
+            setResearch();
+            Research();
 
             Population();
             populationHeader.Header = ("Population #" + Game.townPopulation.Count());
@@ -120,7 +123,20 @@ namespace Corot
             }
 
             game.population = Game.townPopulation.Count();
-            Console.WriteLine(Game.townPopulation);
+            System.Diagnostics.Debug.WriteLine($"Population: {Game.townPopulation}");
+        }
+
+        public void setResearch()
+        {
+            Game.researchPoints = 0;
+
+            for (int i = 0; i < Game.townPopulation.Count; i++)
+            {
+                if (Game.townPopulation[i].idle)
+                {
+                    Game.scienceWorkers.Add(Game.townPopulation[i]);
+                }
+            }
         }
 
         public void Research()
@@ -128,22 +144,94 @@ namespace Corot
             switch (Game.activeResearch)
             {
                 case "zombieVitals":
+                    if (Game.maxResearch > 0)
+                    {
+                    Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.zombieVitalsComplete = true;
+                    }
                     break;
                 case "headshot":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.headshotComplete = true;
+                    }
                     break;
                 case "antivenom":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.antiVenomComplete = true;
+                    }
                     break;
                 case "signs":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.signsComplete = true;
+                    }
                     break;
                 case "diplomacy":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.diplomacyComplete = true;
+                    }
                     break;
                 case "radio":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.radioComplete = true;
+                    }
                     break;
                 case "bunkBeds":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.bunkBedsComplete = true;
+                    }
                     break;
                 case "pesticides":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.pesticidesComplete= true;
+                    }
                     break;
                 case "fortifyWalls":
+                    if (Game.maxResearch > 0)
+                    {
+                        Game.maxResearch = -Game.researchPoints;
+                    }
+                    else
+                    {
+                        bool test = Corot.Research.Research.fortifyWallsComplete = true;
+                    }
                     break;
                 default:
                     break;
@@ -152,47 +240,56 @@ namespace Corot
 
         private void zombieVitalClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Zombie Vitals");
+            System.Diagnostics.Debug.WriteLine("Zombie Vitals");
+            Game.activeResearch = "zombieVitals";
         }
 
         private void headshotClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Headshot");
+            System.Diagnostics.Debug.WriteLine("Headshot");
+            Game.activeResearch = "headshot";
         }
 
         private void antiVenomClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Antivenom");
+            System.Diagnostics.Debug.WriteLine("Antivenom");
+            Game.activeResearch = "antivenom";
         }
 
         private void signsClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Signs");
+            System.Diagnostics.Debug.WriteLine("Signs");
+            Game.activeResearch = "signs";
         }
 
         private void diplomacyClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Diplomacy");
+            System.Diagnostics.Debug.WriteLine("Diplomacy");
+            Game.activeResearch = "diplomacy";
         }
 
         private void radioClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Radio");
+            System.Diagnostics.Debug.WriteLine("Radio");
+            Game.activeResearch = "radio";
         }
 
         private void bunkBedsClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Bunk Beds");
+            System.Diagnostics.Debug.WriteLine("Bunk Beds");
+            Game.activeResearch = "bunkBeds";
         }
 
         private void pesticidesClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Pesticides");
+            System.Diagnostics.Debug.WriteLine("Pesticides");
+            Game.activeResearch = "pesticides";
         }
 
         private void fortifyWallsClick(object sender, RoutedEventArgs e)
         {
-            Console.WriteLine("Fortify Walls");
+            System.Diagnostics.Debug.WriteLine("Fortify Walls");
+            Game.activeResearch = "fortifyWalls";
         }
 
     }
