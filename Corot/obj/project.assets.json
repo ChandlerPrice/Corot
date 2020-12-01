@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\": {}
+    "C:\\Users\\Chandler\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
+      "projectUniqueName": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
       "projectName": "Corot",
-      "projectPath": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
-      "packagesPath": "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\obj\\",
+      "projectPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
+      "packagesPath": "C:\\Users\\Chandler\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Brandon Goldsworthy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Chandler\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -518,5 +518,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

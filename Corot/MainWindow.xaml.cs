@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Corot.Research;
 
 namespace Corot
 {
@@ -67,9 +66,8 @@ namespace Corot
             dayHeader.Header = ("Day #" + game.day);
             foodHeader.Header = ("Food #" + game.food);
             baseDefence.calculateDefense();
-            Console.WriteLine($"{game.population}");
 
-            //Population();
+            Population();
             populationHeader.Header = ("Population #" + Game.townPopulation.Count());
             MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
 
@@ -112,57 +110,16 @@ namespace Corot
             Close();
         }
 
-        private void signsClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "signs";
-        }
-        private void dipomacyClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "diplomacy";
-        }
-        private void radioClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "radio";
-        }
-        private void zombieVitalClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "zombieVitals";
-        }
-        private void headshotClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "headshot";
-        }
-        private void antiVenomClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "antiVenom";
-        }
-        private void bunkBedsClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "bunkBeds";
-        }
-        private void pesticidesClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "pesticides";
-        }
-        private void fortifyWallsClick(object sender, RoutedEventArgs e)
-        {
-            Game.activeResearch = "fortifyWalls";
-        }
-
         //Suppost to be a list of the people in the town
-        /*
         public void Population()
         {
-            for (int i=0; i <= Game.townPopulation.Count(); i++)
+            for (int i=0; i <= game.population; i++)
             {
-                game.townPopulation.Add(person);
+                Game.townPopulation.Add(person);
             }
 
-            Game.townPopulation.Count() = game.townPopulation.Count();
-            game.population = game.townPopulation.Count();
-
-            Console.WriteLine(game.townPopulation);
+            game.population = Game.townPopulation.Count();
+            Console.WriteLine(Game.townPopulation);
         }
-        */
     }
 }
