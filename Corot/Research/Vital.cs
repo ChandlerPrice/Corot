@@ -4,10 +4,11 @@ using System.Text;
 
 namespace Corot.Research
 {
-    class Vital : Research
+    class Vital
     {
-        bool vitalZombieVitals;
-        bool vitalHeadshot;
 
+        protected bool zombieVitals = false;
+        protected bool headshot = false;
+        protected bool antivenom = false;
     }
 }

@@ -18,7 +18,18 @@
             <MenuItem  x:Name="dayHeader" Header="Day #1">
                 <MenuItem Header="Next Day" Click="NextDay"/>
             </MenuItem>
-            <MenuItem Header="_Exit" Click="Exit"/>
+            <MenuItem x:Name="researchHeader" Header="Research">
+                <MenuItem Header="Signs" Click="signsClick"/>
+                <MenuItem Header="Diplomacy" Click="dipomacyClick"/>
+                <MenuItem Header="Radio" Click="radioClick"/>
+                <MenuItem Header="Zombie Vitals" Click="zombieVitalClick"/>
+                <MenuItem Header="Headshot" Click="headshotClick"/>
+                <MenuItem Header="Anti-Venom" Click="antiVenomClick"/>
+                <MenuItem Header="Bunk Beds" Click="bunkBedsClick"/>
+                <MenuItem Header="Pesticides" Click="pesticidesClick"/>
+                <MenuItem Header="Fortify Walls" Click="fortifyWallsClick"/>
+            </MenuItem>
+                <MenuItem Header="_Exit" Click="Exit"/>
         </Menu>
         <Grid Margin="0, 20, 0, 0">
             <Grid.ColumnDefinitions>

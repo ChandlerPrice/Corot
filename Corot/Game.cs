@@ -18,6 +18,7 @@ namespace Corot
         public int food { get { return Food; } set { Food = value; } }
 
         public static List<People> townPopulation = new List<People>();
+        public static string activeResearch { get; set; }
 
 
 
