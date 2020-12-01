@@ -13,7 +13,7 @@ namespace Corot
         int buildings = 4;
         int defenseBuildings = 1;
         int danger = 0;
-        List<People> idlePeople = new List<People>();
+        List<Corot.People.People> idlePeople = new List<Corot.People.People>();
 
 
 

@@ -1,4 +1,5 @@
 ﻿using Corot.Events;
+using Corot.People;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,7 @@ namespace Corot
     {
         Game game;
         BaseDefense baseDefence = new BaseDefense();
-        People person = new People();
+        Corot.People.People person = new Corot.People.People();
         Random random = new Random();
         
 
@@ -63,7 +64,7 @@ namespace Corot
 
         public void NextDay(object sender, RoutedEventArgs e)
         {
-            game.population = Game.townPopulation.Count();
+            countPeople();
             if (game.population <= 0)
             {
                 Close();
@@ -91,18 +92,7 @@ namespace Corot
 
             //Call random events
             game.DailyEvent();
-
-            //Remove food
-            if (game.food < Game.townPopulation.Count())
-            {
-
-            }
-            else
-            {
-                game.food -= Game.townPopulation.Count();
-            }
-            game.population = Game.townPopulation.Count();
-            populationHeader.Header = ($"Population #{game.population}");
+            countPeople();
             dayHeader.Header = ($"Day #{game.day}");
             foodHeader.Header = ($"Food #{game.food}");
         }
@@ -134,6 +124,12 @@ namespace Corot
             System.Diagnostics.Debug.WriteLine($"Population: {game.population}");
         }
 
+        public void countPeople()
+        {
+            game.population = Game.townPopulation.Count();
+            populationHeader.Header = ($"Population #{game.population}");
+        }
+
         public void Food()
         {
             int starveChance;
@@ -163,7 +159,7 @@ namespace Corot
             {
                 if (Game.townPopulation[i].idle)
                 {
-                    Corot.People.scienceWorkers.Add(Game.townPopulation[i]);
+                    Corot.People.Jobs.scienceWorkers.Add(Game.townPopulation[i]);
                 }
             }
         }

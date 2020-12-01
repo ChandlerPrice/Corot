@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Text;
 using static Corot.Events.RandomEvents;
+using Corot.People;
 
 namespace Corot
 {
     class Game
     {
         private Random rand = new Random();
-        People person = new People();
+        Corot.People.People person = new Corot.People.People();
         private int Day;
         private int Population;
         private int Food;
@@ -18,7 +19,7 @@ namespace Corot
         public int population { get { return Population; } set { Population = value; } }
         public int food { get { return Food; } set { Food = value; } }
 
-        public static List<People> townPopulation = new List<People>();
+        public static List<Corot.People.People> townPopulation = new List<Corot.People.People>();
 
 
 
@@ -41,6 +42,8 @@ namespace Corot
                         System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                         Game.townPopulation.RemoveAt(randomValue);
                     }
+
+                    System.Diagnostics.Debug.WriteLine($"Population: {population}");
                     break;
                 case randomDailyEventsEnum.survivorFound:
                     //Population += rand.Next(3);
@@ -48,6 +51,8 @@ namespace Corot
                     {
                         Game.townPopulation.Add(person);
                     }
+                    System.Diagnostics.Debug.WriteLine("New people added");
+                    System.Diagnostics.Debug.WriteLine($"Population: {population}");
                     break;
                 case randomDailyEventsEnum.extraFood:
                     Food += rand.Next(10);
