@@ -22,51 +22,65 @@ namespace Corot
 
 
 
-        public void DailyEvent()
+        public string DailyEvent()
         {
-            int randomValue;
-            randomDailyEventsEnum dailyEvent = new randomDailyEventsEnum();
-            dailyEvent = RandomDailyEvent();
-            switch (dailyEvent)
+            string dailyPrint = "";
+            if(townPopulation.Count != 0)
             {
-                case randomDailyEventsEnum.zombieAttack:
-                    break;
-                case randomDailyEventsEnum.zombieHordeAttack:
-                    break;
-                case randomDailyEventsEnum.survivorDied:
-                    for (int i=0; i < 3; i++)
-                    {
-                        randomValue = rand.Next(townPopulation.Count);
-                        System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
-                        if (townPopulation.Count > 0)
+                int randomValue;
+                randomDailyEventsEnum dailyEvent = new randomDailyEventsEnum();
+                dailyEvent = RandomDailyEvent();
+                switch (dailyEvent)
+                {
+                    case randomDailyEventsEnum.zombieAttack:
+                        break;
+                    case randomDailyEventsEnum.zombieHordeAttack:
+                        break;
+                    case randomDailyEventsEnum.survivorDied:
+                        //Population -= rand.Next(3);
+                        for (int i = 0; i < rand.Next(3); i++)
                         {
-                                Game.townPopulation.RemoveAt(randomValue);
+                            randomValue = rand.Next(townPopulation.Count);
+                            dailyPrint = dailyPrint + ($"   Died: {Game.townPopulation[randomValue].name}     ");
+                            System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
+                            Game.townPopulation.RemoveAt(randomValue);
                         }
-                    }
+                        population = Game.townPopulation.Count;
 
-                    System.Diagnostics.Debug.WriteLine($"Population: {population}");
-                    break;
-                case randomDailyEventsEnum.survivorFound:
-                    for (int i = 0; i < 3; i++)
-                    {
-                        Corot.People.People person = new Corot.People.People();
-                        Game.townPopulation.Add(person);
-                    }
-                    System.Diagnostics.Debug.WriteLine("New people added");
-                    System.Diagnostics.Debug.WriteLine($"Population: {population}");
-                    break;
-                case randomDailyEventsEnum.extraFood:
-                    Food += rand.Next(10);
-                    break;
-                case randomDailyEventsEnum.rottedFood:
-                    Food -= rand.Next(10);
-                    break;
-                case randomDailyEventsEnum.boringDay:
-                    break;
-                default:
-                    break;
+                        System.Diagnostics.Debug.WriteLine($"Population: {population}");
+                        break;
+                    case randomDailyEventsEnum.survivorFound:
+                        //Population += rand.Next(3);
+                        for (int i = 0; i < 3; i++)
+                        {
+                            People.People people = new People.People();
+                            Game.townPopulation.Add(people);
+                        }
+                        population = Game.townPopulation.Count;
+                        dailyPrint = dailyPrint + ("    New people added    ");
+                        System.Diagnostics.Debug.WriteLine("New people added");
+                        System.Diagnostics.Debug.WriteLine($"Population: {population}");
+                        break;
+                    case randomDailyEventsEnum.extraFood:
+                        Food += rand.Next(10);
+                        dailyPrint = dailyPrint + ("    Found food  ");
+                        break;
+                    case randomDailyEventsEnum.rottedFood:
+                        Food -= rand.Next(10);
+                        dailyPrint = dailyPrint + ("    Food went bad   ");
+
+                        break;
+                    case randomDailyEventsEnum.boringDay:
+                        break;
+                    default:
+                        break;
+                }
             }
+            dailyPrint = dailyPrint + ($"   Population: {population}    ");
+            dailyPrint = dailyPrint + ($"   Food: {Food}    ");
+            return dailyPrint;
         }
+
         public void Research()
         {
             switch (Corot.Research.Research.activeResearch)
