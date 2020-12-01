@@ -23,6 +23,7 @@ namespace Corot
         public static int maxResearch { get; set; }
 
         public static List<People> scienceWorkers = new List<People>();
+        public static int totalResearchDone { get; set; } = 0;
 
 
 

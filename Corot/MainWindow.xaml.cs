@@ -70,6 +70,8 @@ namespace Corot
             baseDefence.calculateDefense();
             setResearch();
             Research();
+            System.Diagnostics.Debug.WriteLine($"Research points: {Game.researchPoints}");
+            System.Diagnostics.Debug.WriteLine($"Required research: {Game.maxResearch}");
 
             Population();
             populationHeader.Header = ("Population #" + Game.townPopulation.Count());
@@ -146,91 +148,109 @@ namespace Corot
                 case "zombieVitals":
                     if (Game.maxResearch > 0)
                     {
-                    Game.maxResearch = -Game.researchPoints;
+                    Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone+1);
                         bool test = Corot.Research.Research.zombieVitalsComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "headshot":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.headshotComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "antivenom":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.antiVenomComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "signs":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.signsComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "diplomacy":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.diplomacyComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "radio":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.radioComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "bunkBeds":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.bunkBedsComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "pesticides":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.pesticidesComplete= true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 case "fortifyWalls":
                     if (Game.maxResearch > 0)
                     {
-                        Game.maxResearch = -Game.researchPoints;
+                        Game.maxResearch -= Game.researchPoints;
                     }
                     else
                     {
+                        Game.maxResearch = 100 * (Game.totalResearchDone + 1);
                         bool test = Corot.Research.Research.fortifyWallsComplete = true;
+                        Game.totalResearchDone += 1;
                     }
                     break;
                 default:
