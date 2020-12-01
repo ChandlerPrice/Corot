@@ -10,14 +10,10 @@
         WindowStyle="None">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1"/>
-        <Menu x:Name="MainMenu" DockPanel.Dock="Top" >
-            <MenuItem Header="_TownName"/>
+        <Menu x:Name="MainMenu" DockPanel.Dock="Top">
             <MenuItem x:Name="populationHeader" Header="Population #4" >
             </MenuItem>
             <MenuItem x:Name="foodHeader" Header="Food #5"/>
-            <MenuItem  x:Name="dayHeader" Header="Day #1">
-                <MenuItem Header="Next Day" Click="NextDay"/>
-            </MenuItem>
             <MenuItem x:Name="researchHeader" Header="Research">
                 <MenuItem Header="Signs" Click="signsClick"/>
                 <MenuItem Header="Diplomacy" Click="diplomacyClick"/>
@@ -31,7 +27,7 @@
             </MenuItem>
                 <MenuItem Header="_Exit" Click="Exit"/>
         </Menu>
-        <Grid Margin="0, 20, 0, 0">
+        <Grid Margin="0, 20, 200, 0" Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
@@ -56,7 +52,7 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            
+
             <Button Grid.Column="0">Button 1</Button>
             <Button Grid.Column="1">Button 2</Button>
             <Button Grid.Column="2">Button 3</Button>
@@ -93,7 +89,7 @@
             <Button Grid.Column="7" Grid.Row="2">Button 8</Button>
             <Button Grid.Column="8" Grid.Row="2">Button 8</Button>
             <Button Grid.Column="9" Grid.Row="2">Button 8</Button>
-            
+
             <Button Grid.Column="0" Grid.Row="3">Button 1</Button>
             <Button Grid.Column="1" Grid.Row="3">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="3">Button 3</Button>
@@ -119,7 +115,7 @@
             <Button Grid.Column="7" Grid.Row="4">Button 8</Button>
             <Button Grid.Column="8" Grid.Row="4">Button 8</Button>
             <Button Grid.Column="9" Grid.Row="4">Button 8</Button>
-            
+
             <Button Grid.Column="0" Grid.Row="5">Button 1</Button>
             <Button Grid.Column="1" Grid.Row="5">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="5">Button 3</Button>
@@ -174,6 +170,12 @@
             <Button Grid.Column="7" Grid.Row="9">Button 8</Button>
             <Button Grid.Column="8" Grid.Row="9">Button 8</Button>
             <Button Grid.Column="9" Grid.Row="9">Button 8</Button>
+        </Grid>
+        <Grid Grid.Column="1" Width="200" HorizontalAlignment="Right" Margin="0, 20, 0, 0">
+            <Border BorderBrush="Gray" BorderThickness="100"/>
+            <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
+            <Button Height="50" Content="NEXT DAY" Margin="0, 250, 0, 0" VerticalAlignment="Top" Click="NextDay"/>
+            <Button Height="50" Content="EXIT" Margin="0, 300, 0, 0" VerticalAlignment="Top" Click="Exit"/>
         </Grid>
     </Grid>
 </Window>

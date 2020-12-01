@@ -42,6 +42,7 @@ namespace Corot
             game = new Game();
 
             game.day = 1;
+            textBox.Text = "DAY #" + game.day;
             Game.townPopulation.Add(person);
             Game.townPopulation.Add(person);
             Game.townPopulation.Add(person);
@@ -70,7 +71,7 @@ namespace Corot
                 Close();
             }
             //Update Day
-            System.Diagnostics.Debug.WriteLine($"Day {game.day + 1}\n~~~~~~~\n");
+            System.Diagnostics.Debug.WriteLine($"DAY {game.day + 1}\n~~~~~~~\n");
             game.day += 1;
             baseDefence.calculateDefense();
             setResearch();
@@ -91,9 +92,8 @@ namespace Corot
             }
 
             //Call random events
-            game.DailyEvent();
+            textBox.Text = ($"Day #{game.day}") + game.DailyEvent();
             countPeople();
-            dayHeader.Header = ($"Day #{game.day}");
             foodHeader.Header = ($"Food #{game.food}");
         }
 
