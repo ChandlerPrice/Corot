@@ -20,7 +20,7 @@
             </MenuItem>
             <MenuItem x:Name="researchHeader" Header="Research">
                 <MenuItem Header="Signs" Click="signsClick"/>
-                <MenuItem Header="Diplomacy" Click="dipomacyClick"/>
+                <MenuItem Header="Diplomacy" Click="diplomacyClick"/>
                 <MenuItem Header="Radio" Click="radioClick"/>
                 <MenuItem Header="Zombie Vitals" Click="zombieVitalClick"/>
                 <MenuItem Header="Headshot" Click="headshotClick"/>

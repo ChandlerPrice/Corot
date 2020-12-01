@@ -31,6 +31,7 @@ namespace Corot
         Game game;
         BaseDefense baseDefence = new BaseDefense();
         People person = new People();
+        
 
         public MainWindow()
         {
@@ -121,5 +122,78 @@ namespace Corot
             game.population = Game.townPopulation.Count();
             Console.WriteLine(Game.townPopulation);
         }
+
+        public void Research()
+        {
+            switch (Game.activeResearch)
+            {
+                case "zombieVitals":
+                    break;
+                case "headshot":
+                    break;
+                case "antivenom":
+                    break;
+                case "signs":
+                    break;
+                case "diplomacy":
+                    break;
+                case "radio":
+                    break;
+                case "bunkBeds":
+                    break;
+                case "pesticides":
+                    break;
+                case "fortifyWalls":
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void zombieVitalClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Zombie Vitals");
+        }
+
+        private void headshotClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Headshot");
+        }
+
+        private void antiVenomClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Antivenom");
+        }
+
+        private void signsClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Signs");
+        }
+
+        private void diplomacyClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Diplomacy");
+        }
+
+        private void radioClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Radio");
+        }
+
+        private void bunkBedsClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Bunk Beds");
+        }
+
+        private void pesticidesClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Pesticides");
+        }
+
+        private void fortifyWallsClick(object sender, RoutedEventArgs e)
+        {
+            Console.WriteLine("Fortify Walls");
+        }
+
     }
 }
