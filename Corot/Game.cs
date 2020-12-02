@@ -51,7 +51,7 @@ namespace Corot
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
                     case randomDailyEventsEnum.survivorFound:
-                        for (int i = 0; i < 3; i++)
+                        for (int i = 0; i < rand.Next(3); i++)
                         {
                             People.People people = new People.People();
                             Game.townPopulation.Add(people);

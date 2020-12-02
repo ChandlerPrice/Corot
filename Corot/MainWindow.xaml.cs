@@ -41,6 +41,7 @@ namespace Corot
             InitializeComponent();
             game = new Game();
             game.day = 1;
+            game.food = 5;
             textBox.Text = "DAY #" + game.day;
             for (int i=0;i<4; i++)
             {
@@ -48,8 +49,6 @@ namespace Corot
                 Game.townPopulation.Add(person);
             }
             UpdatePeopleList();
-            game.population = Game.townPopulation.Count();
-            game.food = 5;
 
             MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
 
@@ -71,6 +70,7 @@ namespace Corot
             {
                 peopleListBox.Items.Add(Game.townPopulation[i].name);
             }
+            game.population = Game.townPopulation.Count();
         }
 
 
@@ -80,7 +80,7 @@ namespace Corot
             countPeople();
             if (game.population <= 0)
             {
-                Close();
+                this.Close();
             }
             //Update Day
             game.DailyEvent();
@@ -124,7 +124,7 @@ namespace Corot
                 Close();
             }
              */
-            Close();
+            this.Close();
         }
 
         //Suppost to be a list of the people in the town
