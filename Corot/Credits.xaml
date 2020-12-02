@@ -6,19 +6,25 @@
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
         Title="Credits" Height="450" Width="800"
-        WindowState="Maximized">
+        WindowState="Maximized"
+        WindowStyle="None">
     <Grid>
-        <Border BorderBrush="Black" BorderThickness="1"/>
-        <TextBlock x:Name="CreditsTitle" Text="Credits" HorizontalAlignment="Center" FontSize="48" FontWeight="Bold"/>
-        <TextBlock x:Name="CreditsContent" Text="Game Programmers:" HorizontalAlignment="Center" Margin="100,70" FontSize="16"/>
-        <TextBlock x:Name="CreditsBrandon1" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="100,100"/>
-        <TextBlock x:Name="CreditsChandler1" Text="Chandler Price" HorizontalAlignment="Center" Margin="100,120"/>
-        <TextBlock x:Name="CreditsGage1" Text="Gage Somerville" HorizontalAlignment="Center" Margin="100,140"/>
-        <TextBlock x:Name="CreditsSpencer1" Text="Spencer Buff" HorizontalAlignment="Center" Margin="100,160"/>
-        <TextBlock x:Name="CreditsArtists" Text="Artists:" HorizontalAlignment="Center" Margin="100,190" FontSize="16"/>
-        <TextBlock x:Name="CreditsTatheim1" Text="Tatheim Bahe" HorizontalAlignment="Center" Margin="0,210,0,0"/>
-        <TextBlock x:Name="CreditsUI" Text="UI Developers:" HorizontalAlignment="Center" Margin="0,240,0,0" FontSize="16"/>
-        <TextBlock x:Name="CreditsChandler2" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,260,0,0"/>
-        <TextBlock x:Name="CreditsBrandon2" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,280,0,0"/>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.ColumnSpan="3"/>
+        <Menu x:Name="MainMenu" Grid.ColumnSpan="3">
+            <MenuItem x:Name="gameHeader" Header="Corot-7b"/>
+            <MenuItem x:Name="backHeader" Header="Back" Click="backHeader_Click"/>
+            <MenuItem Header="_Exit" Click="Exit"/>
+        </Menu>
+        <TextBlock x:Name="CreditsTitle" Text="Credits" HorizontalAlignment="Center" FontSize="72" FontWeight="Bold" Margin="0,0,0,0" Grid.ColumnSpan="2" VerticalAlignment="Top"/>
+        <TextBlock x:Name="CreditsContent" Text="Game Programmers:" HorizontalAlignment="Center" Margin="0,120,0,0" FontSize="24" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="CreditsBrandon1" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,160,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsChandler1" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,180,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsGage1" Text="Gage Somerville" HorizontalAlignment="Center" Margin="0,200,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsSpencer1" Text="Spencer Buff" HorizontalAlignment="Center" Margin="0,220,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsArtists" Text="Artists:" HorizontalAlignment="Center" Margin="0,260,0,0" FontSize="24"/>
+        <TextBlock x:Name="CreditsTatheim1" Text="Tatheim Bahe" HorizontalAlignment="Center" Margin="0,300,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsUI" Text="UI Developers:" HorizontalAlignment="Center" Margin="0,340,0,0" FontSize="24"/>
+        <TextBlock x:Name="CreditsChandler2" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,380,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsBrandon2" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,400,0,0" FontSize="14"/>
     </Grid>
 </Window>

@@ -21,5 +21,25 @@ namespace Corot
         {
             InitializeComponent();
         }
+
+        public void Exit(object sender, RoutedEventArgs e)
+        {
+            /*
+            MESSAGE BOX ASK TO CLOSE
+
+            var result = MessageBox.Show("Your progress will not be saved!", "ARE YOU SURE YOU WANT TO EXIT?", MessageBoxButton.YesNo, MessageBoxImage.Question);
+
+            if (result == MessageBoxResult.Yes)    
+            {
+                Close();
+            }
+             */
+            System.Windows.Application.Current.Shutdown();
+        }
+
+        private void backHeader_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

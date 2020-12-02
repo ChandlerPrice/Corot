@@ -219,7 +219,9 @@ namespace Corot
 
         private void creditsHeader_Click(object sender, RoutedEventArgs e)
         {
-
+            Credits credits = new Credits();
+            credits = new Credits();
+            credits.Show();
         }
 
         private void settingsHeader_Click(object sender, RoutedEventArgs e)
