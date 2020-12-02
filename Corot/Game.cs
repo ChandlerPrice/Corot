@@ -78,8 +78,6 @@ namespace Corot
                         break;
                 }
             }
-            dailyPrint = dailyPrint + ($"   Population: {population}    ");
-            dailyPrint = dailyPrint + ($"   Food: {Food}    ");
             return dailyPrint;
         }
 
