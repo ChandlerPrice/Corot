@@ -45,11 +45,11 @@ namespace Corot.People
                     name = Names.Tatheim.ToString();
                     break;
             }
-            engineering = 1;
-            combat = 1;
-            medical = 1;
-            scavenging = 1;
-            leadership = 1;
+            engineering = random.Next(3)+1;
+            combat = random.Next(3) + 1;
+            medical = random.Next(3) + 1;
+            scavenging = random.Next(3) + 1;
+            leadership = random.Next(3) + 1;
             alive = true;
             injured = false;
             special = 0;

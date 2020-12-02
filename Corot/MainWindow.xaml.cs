@@ -48,17 +48,6 @@ namespace Corot
             }
             UpdatePeopleList();
 
-            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
-
-            newExistMenuItem.Items.Clear();
-
-            for (int i = 0; i < Game.townPopulation.Count(); i++)
-            {
-                MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = Game.townPopulation[i].name;
-                newExistMenuItem.Items.Add(newMenuItem2);
-            }
-
             textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
         }
 
@@ -67,7 +56,7 @@ namespace Corot
             peopleListBox.Items.Clear();
             for (int i=0;i < Game.townPopulation.Count; i++)
             {
-                peopleListBox.Items.Add(Game.townPopulation[i].name);
+                peopleListBox.Items.Add($"[{i+1}] {Game.townPopulation[i].name}");
             }
             game.population = Game.townPopulation.Count();
         }
@@ -92,23 +81,12 @@ namespace Corot
             System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
             Food();
             countPeople();
-            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
-
-            newExistMenuItem.Items.Clear();
-
-            for (int i = 0; i < Game.townPopulation.Count(); i++)
-            {
-                MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = Game.townPopulation[i].name;
-                newExistMenuItem.Items.Add(newMenuItem2);
-            }
 
             //Call random events
             outputDisplay.Text = game.DailyEvent();
             countPeople();
             UpdatePeopleList();
             textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
-            foodHeader.Header = ($"Food #{game.food}");
         }
 
         public void Exit(object sender, RoutedEventArgs e)
@@ -129,7 +107,6 @@ namespace Corot
         public void countPeople()
         {
             game.population = Game.townPopulation.Count();
-            populationHeader.Header = ($"Population #{game.population}");
         }
 
         public void Food()
@@ -238,6 +215,16 @@ namespace Corot
                     $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
                     $"Leadership: {Game.townPopulation[index].leadership}\n";
             }
+        }
+
+        private void creditsHeader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void settingsHeader_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

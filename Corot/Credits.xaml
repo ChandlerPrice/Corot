@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
-        Title="Credits" Height="450" Width="800">
+        Title="Credits" Height="450" Width="800"
+        WindowState="Maximized">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1"/>
         <TextBlock x:Name="CreditsTitle" Text="Credits" HorizontalAlignment="Center" FontSize="48" FontWeight="Bold"/>
