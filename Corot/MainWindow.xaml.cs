@@ -224,13 +224,20 @@ namespace Corot
 
         private void peopleListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int index = int.Parse(peopleListBox.SelectedIndex.ToString());
-            outputDisplay.Text = $"Name: {Game.townPopulation[index].name}\n" +
-                $"Combat: {Game.townPopulation[index].combat}\n" +
-                $"Engineering: {Game.townPopulation[index].engineering}\n" +
-                $"Medical: {Game.townPopulation[index].medical}\n" +
-                $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
-                $"Leadership: {Game.townPopulation[index].leadership}\n";
+            if (peopleListBox.SelectedItem == null)
+            {
+                outputDisplay.Text = "";
+            }
+            else
+            {
+                int index = int.Parse(peopleListBox.SelectedIndex.ToString());
+                outputDisplay.Text = $"Name: {Game.townPopulation[index].name}\n" +
+                    $"Combat: {Game.townPopulation[index].combat}\n" +
+                    $"Engineering: {Game.townPopulation[index].engineering}\n" +
+                    $"Medical: {Game.townPopulation[index].medical}\n" +
+                    $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
+                    $"Leadership: {Game.townPopulation[index].leadership}\n";
+            }
         }
     }
 }
