@@ -175,8 +175,7 @@
             <Border BorderBrush="Gray" BorderThickness="100"/>
             <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
             <ComboBox x:Name="peopleListBox" Height="20" Margin="0,120,0,0" VerticalAlignment="Top" MaxDropDownHeight="120"/>
-            <ListView x:Name="peopleInfoList" Height="100" Margin="0,180,0,0" VerticalAlignment="Top">
-            </ListView>
+            <ListView x:Name="peopleInfoList" Height="100" Margin="0,180,0,0" VerticalAlignment="Top"/>
             <Button Height="50" Content="Next Day" Margin="0, 300, 0, 0" VerticalAlignment="Top" Click="NextDay"/>
             <Button Height="50" Content="Exit" Margin="0, 350, 0, 0" VerticalAlignment="Top" Click="Exit"/>
         </Grid>

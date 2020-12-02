@@ -106,6 +106,7 @@ namespace Corot
 
             //Call random events
             textBox.Text = ($"Day #{game.day}") + game.DailyEvent();
+
             countPeople();
             UpdatePeopleList();
             foodHeader.Header = ($"Food #{game.food}");
@@ -133,7 +134,6 @@ namespace Corot
             {
                 Game.townPopulation.Count();
             }
-
             game.population = Game.townPopulation.Count();
             System.Diagnostics.Debug.WriteLine($"Population: {game.population}");
         }
