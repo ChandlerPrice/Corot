@@ -165,8 +165,8 @@
             <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
             <ComboBox x:Name="peopleListBox" Height="20" Margin="0,60,0,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="peopleListBox_SelectionChanged"/>
             <TextBlock x:Name="outputDisplay" Height="180" Margin="0,100,0,0" VerticalAlignment="Top" Background="White"/>
-            <Button Height="50" Content="Next Day" Margin="0, 0, 0, 55" VerticalAlignment="Bottom" Click="NextDay"/>
-            <Button Height="50" Content="Exit" Margin="0, 0, 0, 5" VerticalAlignment="Bottom" Click="Exit"/>
+            <Button Height="50" Content="Next Day" Margin="1, 0, 1, 51" VerticalAlignment="Bottom" Click="NextDay"/>
+            <Button Height="50" Content="Exit" Margin="1, 0, 1, 1" VerticalAlignment="Bottom" Click="Exit"/>
         </Grid>
     </Grid>
 </Window>
