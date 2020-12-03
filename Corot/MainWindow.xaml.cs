@@ -56,7 +56,9 @@ namespace Corot
             peopleListBox.Items.Clear();
             for (int i=0;i < Game.townPopulation.Count; i++)
             {
-                peopleListBox.Items.Add($"[{i+1}] {Game.townPopulation[i].name}");
+                var test = Game.townPopulation[i].job;
+                int jobValue = 0;
+                peopleListBox.Items.Add($"[{i+1}] {Game.townPopulation[i].name} {jobValue}");
             }
             game.population = Game.townPopulation.Count();
         }
@@ -65,27 +67,32 @@ namespace Corot
 
         public void NextDay(object sender, RoutedEventArgs e)
         {
-            UpdatePeopleList();
-            countPeople();
-            if (game.population <= 0)
+            if (game.population > 0)
             {
-                System.Windows.Application.Current.Shutdown();
-            }
-            //Update Day
-            game.day += 1;
-            System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
-            var calculateDanger = baseDefence.calculateDefense();
-            setResearch();
-            game.Research();
-            System.Diagnostics.Debug.WriteLine($"Research points: {Corot.Research.Research.researchPoints}");
-            System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
+                jobAssignment.Visibility = Visibility.Hidden;
+                jobUI.Visibility = Visibility.Hidden;
+                UpdatePeopleList();
+                countPeople();
+                if (game.population <= 0)
+                {
+                    System.Windows.Application.Current.Shutdown();
+                }
+                //Update Day
+                game.day += 1;
+                System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
+                var calculateDanger = baseDefence.calculateDefense();
+                setResearch();
+                game.Research();
+                System.Diagnostics.Debug.WriteLine($"Research points: {Corot.Research.Research.researchPoints}");
+                System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
 
-            //Call random events
-            outputDisplay.Text = game.DailyEvent();
-            Food();
-            countPeople();
-            UpdatePeopleList();
-            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nDanger: {calculateDanger}");
+                //Call random events
+                outputDisplay.Text = game.DailyEvent();
+                Food();
+                countPeople();
+                UpdatePeopleList();
+                textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nDanger: {calculateDanger}");
+            }
         }
 
         public void Exit(object sender, RoutedEventArgs e)
@@ -146,7 +153,7 @@ namespace Corot
         {
             if (peopleListBox.SelectedItem == null)
             {
-                outputDisplay.Text = "";
+                outputDisplay.Text = "No person was selected";
             }
             else
             {
@@ -157,6 +164,8 @@ namespace Corot
                     $"Medical: {Game.townPopulation[index].medical}\n" +
                     $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
                     $"Leadership: {Game.townPopulation[index].leadership}\n";
+                jobAssignment.Visibility = Visibility.Visible;
+                jobUI.Visibility = Visibility.Visible;
             }
         }
         private void ResearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -229,5 +238,42 @@ namespace Corot
 
         }
 
+        private void jobAssignment_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            int index = int.Parse(peopleListBox.SelectedIndex.ToString());
+            string test = ((ComboBoxItem)jobAssignment.SelectedItem).Content.ToString();
+            int trim = int.Parse(test.Substring(1, 1));
+            outputDisplay.Text = $"{Game.townPopulation[index].name} changed to the {test.Substring(4)} job\n" +
+                    $"Name: {Game.townPopulation[index].name}\n" +
+                    $"Combat: {Game.townPopulation[index].combat}\n" +
+                    $"Engineering: {Game.townPopulation[index].engineering}\n" +
+                    $"Medical: {Game.townPopulation[index].medical}\n" +
+                    $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
+                    $"Leadership: {Game.townPopulation[index].leadership}\n";
+            
+            switch (trim)
+            {
+                case 1:
+                    Game.townPopulation[index].job = Jobs.guardingWorkers.ToString();
+                    break;
+                case 2:
+                    Game.townPopulation[index].job = Jobs.fightingWorkers.ToString();
+                    break;
+                case 3:
+                    Game.townPopulation[index].job = Jobs.scavengingWorkers.ToString();
+                    break;
+                case 4:
+                    Game.townPopulation[index].job = Jobs.farmingWorkers.ToString();
+                    break;
+                case 5:
+                    Game.townPopulation[index].job = Jobs.scienceWorkers.ToString();
+                    break;
+                case 6:
+                    Game.townPopulation[index].job = Jobs.scoutWorkers.ToString();
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }

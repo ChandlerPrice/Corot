@@ -177,7 +177,16 @@
                 <ComboBoxItem Content="[8] Diplomacy"/>
                 <ComboBoxItem Content="[9] Radio"/>
             </ComboBox>
-            <TextBlock x:Name="outputDisplay" Height="500" Margin="2,170,2,0" VerticalAlignment="Top" Background="White"/>
+            <TextBlock x:Name="outputDisplay" Height="350" Margin="2,170,2,0" VerticalAlignment="Top" Background="White"/>
+            <TextBlock x:Name="jobUI" VerticalAlignment="Top" Margin="10,550,130,0" Text="Jobs:" FontSize="14" Visibility="Hidden"/>
+            <ComboBox x:Name="jobAssignment" Height="20" Margin="70, 550,0,0" VerticalAlignment="Top" SelectionChanged="jobAssignment_SelectionChanged" Visibility="Hidden">
+                <ComboBoxItem Content="[1] Guard"/>
+                <ComboBoxItem Content="[2] Fighter"/>
+                <ComboBoxItem Content="[3] Scavenger"/>
+                <ComboBoxItem Content="[4] Farmer"/>
+                <ComboBoxItem Content="[5] Scientist"/>
+                <ComboBoxItem Content="[6] Scout"/>
+            </ComboBox>
             <Button Height="50" Content="Next Day" Margin="1, 0, 1, 51" VerticalAlignment="Bottom" Click="NextDay"/>
             <Button Height="50" Content="Exit" Margin="1, 0, 1, 1" VerticalAlignment="Bottom" Click="Exit"/>
         </Grid>

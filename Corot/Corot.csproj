@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Build\CreditsBackground.jpg" />
     <None Remove="Images\DefenseBuildingImage.jpg" />
     <None Remove="Images\HospitalBuildingImage.png" />
     <None Remove="Images\HousingBuildingImage.png" />
@@ -24,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Build\CreditsBackground.jpg" />
+    <Resource Include="Images\CreditsBackground.jpg" />
     <Resource Include="Images\HospitalBuildingImage.png" />
     <Resource Include="Images\ResearchBuildingImage.png" />
     <Resource Include="Images\DefenseBuildingImage.jpg" />
