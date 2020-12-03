@@ -454,34 +454,19 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Spencer\\.nuget\\packages\\": {}
-=======
-    "C:\\Users\\Chandler\\.nuget\\packages\\": {}
->>>>>>> 91666d6f4cf66f7856f76ee929ccc32f7bc46173
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+      "projectUniqueName": "C:\\Users\\Spencer\\source\\repos\\Corot\\Corot\\Corot.csproj",
       "projectName": "Corot",
-      "projectPath": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+      "projectPath": "C:\\Users\\Spencer\\source\\repos\\Corot\\Corot\\Corot.csproj",
       "packagesPath": "C:\\Users\\Spencer\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\obj\\",
+      "outputPath": "C:\\Users\\Spencer\\source\\repos\\Corot\\Corot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Spencer\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-      "projectUniqueName": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
-      "projectName": "Corot",
-      "projectPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
-      "packagesPath": "C:\\Users\\Chandler\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\obj\\",
-      "projectStyle": "PackageReference",
-      "configFilePaths": [
-        "C:\\Users\\Chandler\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 91666d6f4cf66f7856f76ee929ccc32f7bc46173
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -533,13 +518,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Spencer\\Source\\Repos\\Corot\\Corot\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }

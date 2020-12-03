@@ -6,5 +6,10 @@ namespace Corot
 {
     class HousingBuilding
     {
+        Game game;
+        public HousingBuilding()
+        {
+            game.MaxPopulation = ;
+        }
     }
 }
