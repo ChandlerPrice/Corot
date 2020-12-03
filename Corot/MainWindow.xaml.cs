@@ -142,62 +142,6 @@ namespace Corot
                 }
             }
         }
-
-
-        private void zombieVitalClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Zombie Vitals");
-            Corot.Research.Research.activeResearch = "zombieVitals";
-        }
-
-        private void headshotClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Headshot");
-            Corot.Research.Research.activeResearch = "headshot";
-        }
-
-        private void antiVenomClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Antivenom");
-            Corot.Research.Research.activeResearch = "antivenom";
-        }
-
-        private void signsClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Signs");
-            Corot.Research.Research.activeResearch = "signs";
-        }
-
-        private void diplomacyClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Diplomacy");
-            Corot.Research.Research.activeResearch = "diplomacy";
-        }
-
-        private void radioClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Radio");
-            Corot.Research.Research.activeResearch = "radio";
-        }
-
-        private void bunkBedsClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Bunk Beds");
-            Corot.Research.Research.activeResearch = "bunkBeds";
-        }
-
-        private void pesticidesClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Pesticides");
-            Corot.Research.Research.activeResearch = "pesticides";
-        }
-
-        private void fortifyWallsClick(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Debug.WriteLine("Fortify Walls");
-            Corot.Research.Research.activeResearch = "fortifyWalls";
-        }
-
         private void peopleListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (peopleListBox.SelectedItem == null)
@@ -217,6 +161,7 @@ namespace Corot
         }
         private void ResearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            game.Research();
             if (ResearchListBox.SelectedItem == null)
             {
                 outputDisplay.Text = "";
@@ -225,7 +170,50 @@ namespace Corot
             {
                 int index = int.Parse(ResearchListBox.SelectedIndex.ToString());
                 string test = ((ComboBoxItem)ResearchListBox.SelectedItem).Content.ToString();
+                int trim = int.Parse(test.Substring(1,1));
                 outputDisplay.Text = $"{test.Substring(4)} Technology selected";
+
+                switch (trim)
+                {
+                    case 1:
+                        Corot.Research.Research.activeResearch = "bunkBeds";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 2:
+                        Corot.Research.Research.activeResearch = "fortifyWalls";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 3:
+                        Corot.Research.Research.activeResearch = "pesticides";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 4:
+                        Corot.Research.Research.activeResearch = "zombieVitals";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 5:
+                        Corot.Research.Research.activeResearch = "headshot";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 6:
+                        Corot.Research.Research.activeResearch = "antivenom";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 7:
+                        Corot.Research.Research.activeResearch = "signs";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 8:
+                        Corot.Research.Research.activeResearch = "diplomacy";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    case 9:
+                        Corot.Research.Research.activeResearch = "radio";
+                        outputDisplay.Text += $"\n {Corot.Research.Research.researchPoints} | {Corot.Research.Research.maxResearch}";
+                        break;
+                    default:
+                        break;
+                }
             }
         }
 
