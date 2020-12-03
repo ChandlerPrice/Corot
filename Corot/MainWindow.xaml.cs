@@ -71,22 +71,20 @@ namespace Corot
                 System.Windows.Application.Current.Shutdown();
             }
             //Update Day
-            //game.DailyEvent();
             game.day += 1;
             System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
-            baseDefence.calculateDefense();
+            var calculateDanger = baseDefence.calculateDefense();
             setResearch();
             game.Research();
             System.Diagnostics.Debug.WriteLine($"Research points: {Corot.Research.Research.researchPoints}");
             System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
-            Food();
-            countPeople();
 
             //Call random events
             outputDisplay.Text = game.DailyEvent();
+            Food();
             countPeople();
             UpdatePeopleList();
-            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
+            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nDanger: {calculateDanger}");
         }
 
         public void Exit(object sender, RoutedEventArgs e)
@@ -116,13 +114,13 @@ namespace Corot
             game.food -= game.population;
             if (game.food < 0 )
             {
-                System.Diagnostics.Debug.WriteLine("The town is starving, people are going to die from your incompetence (10% per person)");
+                outputDisplay.Text += ("\n\nThe town is starving");
                 for (int i = 0; i < Game.townPopulation.Count; i++)
                 {
                     starveChance = random.Next(10);
                     if (starveChance == 1)
                     {
-                    System.Diagnostics.Debug.WriteLine($"Died: {i}");
+                        outputDisplay.Text += ($"\nDied: {Game.townPopulation[i].name}");
                     Game.townPopulation.RemoveAt(i);
 
                     }
@@ -137,7 +135,7 @@ namespace Corot
 
             for (int i = 0; i < Game.townPopulation.Count; i++)
             {
-                if (Game.townPopulation[i].idle)
+                if (Game.townPopulation[i].job == Corot.People.Jobs.guardingWorkers.ToString())
                 {
                     Corot.People.Jobs.scienceWorkers.Add(Game.townPopulation[i]);
                 }

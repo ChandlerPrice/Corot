@@ -38,10 +38,10 @@ namespace Corot
                         if (attack >= baseDefense.calculateDefense())
                         {
                             dailyPrint = "You were attacked";
-                            for (int i = 0; i < rand.Next(3 * (population/2)); i++)
+                            for (int i = 0; i <= rand.Next(3 * (population/2)); i++)
                             {
                                 randomValue = rand.Next(townPopulation.Count);
-                                dailyPrint = dailyPrint + ($"   Died: {Game.townPopulation[randomValue].name}     ");
+                                dailyPrint = dailyPrint + ($"\nDied: {Game.townPopulation[randomValue].name}");
                                 System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                                 Game.townPopulation.RemoveAt(randomValue);
                             }
@@ -53,41 +53,56 @@ namespace Corot
                     case randomDailyEventsEnum.zombieHordeAttack:
                         break;
                     case randomDailyEventsEnum.survivorDied:
-                        for (int i = 0; i < rand.Next(3); i++)
+                        if (Corot.Research.Research.antiVenomComplete == false)
                         {
-                            randomValue = rand.Next(townPopulation.Count);
-                            dailyPrint = dailyPrint + ($"   Died: {Game.townPopulation[randomValue].name}     ");
-                            System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
-                            Game.townPopulation.RemoveAt(randomValue);
-                        }
-                        population = Game.townPopulation.Count;
+                            dailyPrint = "A disease outbreak occured";
+                            for (int i = 0; i <= rand.Next((population/10)+1); i++)
+                            {
+                                randomValue = rand.Next(townPopulation.Count);
+                                dailyPrint = dailyPrint + ($"\nDied: {Game.townPopulation[randomValue].name}");
+                                System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
+                                Game.townPopulation.RemoveAt(randomValue);
+                            }
+                            population = Game.townPopulation.Count;
 
-                        System.Diagnostics.Debug.WriteLine($"Population: {population}");
+                            System.Diagnostics.Debug.WriteLine($"Population: {population}");
+                        }
+                        else
+                        {
+                            dailyPrint = "A disease outbreak was cured";
+                        }
                         break;
                     case randomDailyEventsEnum.survivorFound:
-                        for (int i = 0; i < rand.Next(3); i++)
+                        int researchMultiplier = 1;
+                        if (Corot.Research.Research.signsComplete == true)
+                        {
+                            researchMultiplier += 1;
+                        }
+                        if (Corot.Research.Research.radioComplete == true)
+                        {
+                            researchMultiplier += 1;
+                        }
+                        for (int i = 0; i < rand.Next(2 * researchMultiplier); i++)
                         {
                             People.People people = new People.People();
                             Game.townPopulation.Add(people);
                         }
                         population = Game.townPopulation.Count;
-                        dailyPrint = dailyPrint + ("    New people added    ");
-                        //main.peopleInfoList.Items.Add("New people added");
+                        dailyPrint = dailyPrint + ("New people added");
                         System.Diagnostics.Debug.WriteLine("New people added");
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
                     case randomDailyEventsEnum.extraFood:
                         Food += rand.Next(20);
-                        dailyPrint = dailyPrint + ("    Found food  ");
-                        //main.peopleInfoList.Items.Add("Found Food");
+                        dailyPrint = dailyPrint + ($"We found {Food} food");
                         break;
                     case randomDailyEventsEnum.rottedFood:
-                        Food -= rand.Next(20);
-                        dailyPrint = dailyPrint + ("    Food went bad   ");
-                        //main.peopleInfoList.Items.Add("Food went bad");
+                        int rot = rand.Next((Food / 2));
+                        Food -= rot;
+                        dailyPrint = dailyPrint + ($"{rot} Food went bad");
                         break;
                     case randomDailyEventsEnum.boringDay:
-                        dailyPrint = dailyPrint + ("    Boring day   ");
+                        dailyPrint = dailyPrint + ("Boring day");
                         break;
                     default:
                         break;

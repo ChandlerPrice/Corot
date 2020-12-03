@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="800" Width="1600"
         WindowState="Maximized"
         WindowStyle="None">
     <Grid>
@@ -163,8 +163,8 @@
         <Grid Grid.Column="1" Width="200" HorizontalAlignment="Right" Margin="0, 20, 0, 0">
             <Border BorderBrush="Gray" BorderThickness="100"/>
             <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
-            <ComboBox x:Name="peopleListBox" Height="20" Margin="0,60,0,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="peopleListBox_SelectionChanged"/>
-            <TextBlock x:Name="outputDisplay" Height="180" Margin="0,100,0,0" VerticalAlignment="Top" Background="White"/>
+            <ComboBox x:Name="peopleListBox" Height="20" Margin="0,80,0,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="peopleListBox_SelectionChanged"/>
+            <TextBlock x:Name="outputDisplay" Height="500" Margin="0,150,0,0" VerticalAlignment="Top" Background="White"/>
             <Button Height="50" Content="Next Day" Margin="1, 0, 1, 51" VerticalAlignment="Bottom" Click="NextDay"/>
             <Button Height="50" Content="Exit" Margin="1, 0, 1, 1" VerticalAlignment="Bottom" Click="Exit"/>
         </Grid>

@@ -11,5 +11,6 @@ namespace Corot.People
         public static List<People> fightingWorkers = new List<People>();
         public static List<People> farmingWorkers = new List<People>();
         public static List<People> scavengingWorkers = new List<People>();
+        public static List<People> guardingWorkers = new List<People>();
     }
 }
