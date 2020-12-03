@@ -16,6 +16,7 @@ namespace Corot
 
         public int day { get { return Day; } set { Day = value; } }
         public int population { get { return Population; } set { Population = value; } }
+        public int MaxPopulation { get; set; }
         public int food { get { return Food; } set { Food = value; } }
 
         public static List<Corot.People.People> townPopulation = new List<Corot.People.People>();
