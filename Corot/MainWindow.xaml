@@ -163,8 +163,21 @@
         <Grid Grid.Column="1" Width="200" HorizontalAlignment="Right" Margin="0, 20, 0, 0">
             <Border BorderBrush="Gray" BorderThickness="100"/>
             <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
-            <ComboBox x:Name="peopleListBox" Height="20" Margin="0,80,0,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="peopleListBox_SelectionChanged"/>
-            <TextBlock x:Name="outputDisplay" Height="500" Margin="0,150,0,0" VerticalAlignment="Top" Background="White"/>
+            <TextBlock x:Name="populationUI" VerticalAlignment="Top" Margin="10,80,130,0" Text="People:" FontSize="14"/>
+            <ComboBox x:Name="peopleListBox" Height="20" Margin="70,80,1,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="peopleListBox_SelectionChanged"/>
+            <TextBlock x:Name="researchUI" VerticalAlignment="Top" Margin="10,120,130,0" Text="Research:" FontSize="14"/>
+            <ComboBox x:Name="ResearchListBox" Height="20" Margin="70,120,1,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="ResearchListBox_SelectionChanged">
+                <ComboBoxItem Content="[1] Bunk Beds"/>
+                <ComboBoxItem Content="[2] Fortify Walls"/>
+                <ComboBoxItem Content="[3] Pesticides"/>
+                <ComboBoxItem Content="[4] Vital Targets"/>
+                <ComboBoxItem Content="[5] Headshots"/>
+                <ComboBoxItem Content="[6] Anti Venom"/>
+                <ComboBoxItem Content="[7] Signs"/>
+                <ComboBoxItem Content="[8] Diplomacy"/>
+                <ComboBoxItem Content="[9] Radio"/>
+            </ComboBox>
+            <TextBlock x:Name="outputDisplay" Height="500" Margin="2,170,2,0" VerticalAlignment="Top" Background="White"/>
             <Button Height="50" Content="Next Day" Margin="1, 0, 1, 51" VerticalAlignment="Bottom" Click="NextDay"/>
             <Button Height="50" Content="Exit" Margin="1, 0, 1, 1" VerticalAlignment="Bottom" Click="Exit"/>
         </Grid>

@@ -62,6 +62,7 @@ namespace Corot
         }
 
 
+
         public void NextDay(object sender, RoutedEventArgs e)
         {
             UpdatePeopleList();
@@ -214,6 +215,19 @@ namespace Corot
                     $"Leadership: {Game.townPopulation[index].leadership}\n";
             }
         }
+        private void ResearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ResearchListBox.SelectedItem == null)
+            {
+                outputDisplay.Text = "";
+            }
+            else
+            {
+                int index = int.Parse(ResearchListBox.SelectedIndex.ToString());
+                string test = ((ComboBoxItem)ResearchListBox.SelectedItem).Content.ToString();
+                outputDisplay.Text = $"{test.Substring(4)} Technology selected";
+            }
+        }
 
         private void creditsHeader_Click(object sender, RoutedEventArgs e)
         {
@@ -226,5 +240,6 @@ namespace Corot
         {
 
         }
+
     }
 }
