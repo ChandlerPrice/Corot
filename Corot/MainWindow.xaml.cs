@@ -34,45 +34,44 @@ namespace Corot
         BaseDefense baseDefence = new BaseDefense();
         //Corot.People.People person = new Corot.People.People();
         Random random = new Random();
-        
 
         public MainWindow()
         {
             InitializeComponent();
             game = new Game();
-
             game.day = 1;
-            textBox.Text = "DAY #" + game.day;
+            game.food = 5;
             for (int i=0;i<4; i++)
             {
                 Corot.People.People person = new Corot.People.People();
                 Game.townPopulation.Add(person);
             }
-            game.population = Game.townPopulation.Count();
-            game.food = 5;
+            UpdatePeopleList();
 
-            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
-
-            newExistMenuItem.Items.Clear();
-
-            for (int i = 0; i < Game.townPopulation.Count(); i++)
-            {
-                MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = Game.townPopulation[i].name;
-                newExistMenuItem.Items.Add(newMenuItem2);
-            }
-
+            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
         }
+
+        private void UpdatePeopleList()
+        {
+            peopleListBox.Items.Clear();
+            for (int i=0;i < Game.townPopulation.Count; i++)
+            {
+                peopleListBox.Items.Add($"[{i+1}] {Game.townPopulation[i].name}");
+            }
+            game.population = Game.townPopulation.Count();
+        }
+
 
         public void NextDay(object sender, RoutedEventArgs e)
         {
+            UpdatePeopleList();
             countPeople();
             if (game.population <= 0)
             {
-                Close();
+                System.Windows.Application.Current.Shutdown();
             }
             //Update Day
-            game.DailyEvent();
+            //game.DailyEvent();
             game.day += 1;
             System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
             baseDefence.calculateDefense();
@@ -81,22 +80,13 @@ namespace Corot
             System.Diagnostics.Debug.WriteLine($"Research points: {Corot.Research.Research.researchPoints}");
             System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
             Food();
-            Population();
-            MenuItem newExistMenuItem = (MenuItem)this.populationHeader;
-
-            newExistMenuItem.Items.Clear();
-
-            for (int i = 0; i < Game.townPopulation.Count(); i++)
-            {
-                MenuItem newMenuItem2 = new MenuItem();
-                newMenuItem2.Header = Game.townPopulation[i].name;
-                newExistMenuItem.Items.Add(newMenuItem2);
-            }
+            countPeople();
 
             //Call random events
-            textBox.Text = ($"Day #{game.day}") + game.DailyEvent();
+            outputDisplay.Text = game.DailyEvent();
             countPeople();
-            foodHeader.Header = ($"Food #{game.food}");
+            UpdatePeopleList();
+            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
         }
 
         public void Exit(object sender, RoutedEventArgs e)
@@ -111,25 +101,12 @@ namespace Corot
                 Close();
             }
              */
-            Close();
-        }
-
-        //Suppost to be a list of the people in the town
-        public void Population()
-        {
-            for (int i=0; i <= game.population; i++)
-            {
-                Game.townPopulation.Count();
-            }
-
-            game.population = Game.townPopulation.Count();
-            System.Diagnostics.Debug.WriteLine($"Population: {game.population}");
+            System.Windows.Application.Current.Shutdown();
         }
 
         public void countPeople()
         {
             game.population = Game.townPopulation.Count();
-            populationHeader.Header = ($"Population #{game.population}");
         }
 
         public void Food()
@@ -222,5 +199,34 @@ namespace Corot
             Corot.Research.Research.activeResearch = "fortifyWalls";
         }
 
+        private void peopleListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (peopleListBox.SelectedItem == null)
+            {
+                outputDisplay.Text = "";
+            }
+            else
+            {
+                int index = int.Parse(peopleListBox.SelectedIndex.ToString());
+                outputDisplay.Text = $"Name: {Game.townPopulation[index].name}\n" +
+                    $"Combat: {Game.townPopulation[index].combat}\n" +
+                    $"Engineering: {Game.townPopulation[index].engineering}\n" +
+                    $"Medical: {Game.townPopulation[index].medical}\n" +
+                    $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
+                    $"Leadership: {Game.townPopulation[index].leadership}\n";
+            }
+        }
+
+        private void creditsHeader_Click(object sender, RoutedEventArgs e)
+        {
+            Credits credits = new Credits();
+            credits = new Credits();
+            credits.Show();
+        }
+
+        private void settingsHeader_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

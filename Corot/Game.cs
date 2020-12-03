@@ -25,7 +25,8 @@ namespace Corot
         public string DailyEvent()
         {
             string dailyPrint = "";
-            if(townPopulation.Count != 0)
+            MainWindow main = new MainWindow();
+            if (townPopulation.Count != 0)
             {
                 int randomValue;
                 randomDailyEventsEnum dailyEvent = new randomDailyEventsEnum();
@@ -37,11 +38,11 @@ namespace Corot
                     case randomDailyEventsEnum.zombieHordeAttack:
                         break;
                     case randomDailyEventsEnum.survivorDied:
-                        //Population -= rand.Next(3);
                         for (int i = 0; i < rand.Next(3); i++)
                         {
                             randomValue = rand.Next(townPopulation.Count);
                             dailyPrint = dailyPrint + ($"   Died: {Game.townPopulation[randomValue].name}     ");
+                            //main.peopleInfoList.Items.Add($"Died: {Game.townPopulation[randomValue].name}");
                             System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                             Game.townPopulation.RemoveAt(randomValue);
                         }
@@ -58,17 +59,19 @@ namespace Corot
                         }
                         population = Game.townPopulation.Count;
                         dailyPrint = dailyPrint + ("    New people added    ");
+                        //main.peopleInfoList.Items.Add("New people added");
                         System.Diagnostics.Debug.WriteLine("New people added");
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
                     case randomDailyEventsEnum.extraFood:
                         Food += rand.Next(20);
                         dailyPrint = dailyPrint + ("    Found food  ");
+                        //main.peopleInfoList.Items.Add("Found Food");
                         break;
                     case randomDailyEventsEnum.rottedFood:
                         Food -= rand.Next(20);
                         dailyPrint = dailyPrint + ("    Food went bad   ");
-
+                        //main.peopleInfoList.Items.Add("Food went bad");
                         break;
                     case randomDailyEventsEnum.boringDay:
                         dailyPrint = dailyPrint + ("    Boring day   ");
@@ -77,8 +80,6 @@ namespace Corot
                         break;
                 }
             }
-            dailyPrint = dailyPrint + ($"   Population: {population}    ");
-            dailyPrint = dailyPrint + ($"   Food: {Food}    ");
             return dailyPrint;
         }
 
