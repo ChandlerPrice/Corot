@@ -51,7 +51,7 @@ namespace Corot
                         break;
                     case randomDailyEventsEnum.survivorFound:
                         //Population += rand.Next(3);
-                        for (int i = 0; i < 3; i++)
+                        for (int i = 0; i < rand.Next(3); i++)
                         {
                             People.People people = new People.People();
                             Game.townPopulation.Add(people);
@@ -62,15 +62,16 @@ namespace Corot
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
                     case randomDailyEventsEnum.extraFood:
-                        Food += rand.Next(10);
+                        Food += rand.Next(20);
                         dailyPrint = dailyPrint + ("    Found food  ");
                         break;
                     case randomDailyEventsEnum.rottedFood:
-                        Food -= rand.Next(10);
+                        Food -= rand.Next(20);
                         dailyPrint = dailyPrint + ("    Food went bad   ");
 
                         break;
                     case randomDailyEventsEnum.boringDay:
+                        dailyPrint = dailyPrint + ("    Boring day   ");
                         break;
                     default:
                         break;
