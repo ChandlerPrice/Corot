@@ -25,7 +25,6 @@ namespace Corot
         public string DailyEvent()
         {
             string dailyPrint = "";
-            MainWindow main = new MainWindow();
             if (townPopulation.Count != 0)
             {
                 int randomValue;
@@ -51,7 +50,6 @@ namespace Corot
                         System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
                     case randomDailyEventsEnum.survivorFound:
-                        //Population += rand.Next(3);
                         for (int i = 0; i < rand.Next(3); i++)
                         {
                             People.People people = new People.People();
