@@ -55,7 +55,7 @@ namespace Corot.People
             special = 0;
             weapon = "N/A";
             tool = "N/A";
-            job = Jobs.guardingWorkers.ToString();
+            job = Jobs.Guard;
         }
 
         public enum Names
@@ -72,7 +72,17 @@ namespace Corot.People
             Tatheim
         }
 
-        public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, List<Jobs> job)
+        public enum Jobs
+        {
+            Guard,
+            Fighter,
+            Farmer,
+            Scavenger,
+            Scientist,
+            Scout
+        }
+
+        public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, Jobs job)
         {
             this.name = name;
             this.engineering = engineering;
@@ -85,7 +95,7 @@ namespace Corot.People
             this.special = special;
             this.weapon = weapon;
             this.tool = tool;
-            this.job = job.ToString();
+            this.job = job;
         }
 
 
@@ -100,7 +110,7 @@ namespace Corot.People
         public bool alive { get; set; }
         public bool injured { get; set; }
         public int special { get; set; }
-        public string job { get; set; }
+        public Jobs job { get; set; }
 
         //Equipment
         public string weapon { get; set; }

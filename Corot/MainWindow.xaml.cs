@@ -57,8 +57,8 @@ namespace Corot
             for (int i=0;i < Game.townPopulation.Count; i++)
             {
                 var test = Game.townPopulation[i].job;
-                int jobValue = 0;
-                peopleListBox.Items.Add($"[{i+1}] {Game.townPopulation[i].name} {jobValue}");
+                string jobValue = Game.townPopulation[i].job.ToString().Substring(0,4);
+                peopleListBox.Items.Add($"[{i+1}] {Game.townPopulation[i].name} [{jobValue}]");
             }
             game.population = Game.townPopulation.Count();
         }
@@ -143,9 +143,9 @@ namespace Corot
 
             for (int i = 0; i < Game.townPopulation.Count; i++)
             {
-                if (Game.townPopulation[i].job == Corot.People.Jobs.guardingWorkers.ToString())
+                if (Game.townPopulation[i].job == Corot.People.People.Jobs.Scientist)
                 {
-                    Corot.People.Jobs.scienceWorkers.Add(Game.townPopulation[i]);
+
                 }
             }
         }
@@ -153,7 +153,7 @@ namespace Corot
         {
             if (peopleListBox.SelectedItem == null)
             {
-                outputDisplay.Text = "No person was selected";
+                //outputDisplay.Text = "No person was selected";
             }
             else
             {
@@ -254,26 +254,29 @@ namespace Corot
             switch (trim)
             {
                 case 1:
-                    Game.townPopulation[index].job = Jobs.guardingWorkers.ToString();
+                    Game.townPopulation[index].job = Corot.People.People.Jobs.Guard;
                     break;
                 case 2:
-                    Game.townPopulation[index].job = Jobs.fightingWorkers.ToString();
+                    Game.townPopulation[index].job = Corot.People.People.Jobs.Fighter;
                     break;
                 case 3:
-                    Game.townPopulation[index].job = Jobs.scavengingWorkers.ToString();
+                    Game.townPopulation[index].job = Corot.People.People.Jobs.Scavenger;
                     break;
                 case 4:
-                    Game.townPopulation[index].job = Jobs.farmingWorkers.ToString();
+                    Game.townPopulation[index].job = Corot.People.People.Jobs.Farmer;
                     break;
                 case 5:
-                    Game.townPopulation[index].job = Jobs.scienceWorkers.ToString();
+                    Game.townPopulation[index].job = Corot.People.People.Jobs.Scientist;
                     break;
                 case 6:
-                    Game.townPopulation[index].job = Jobs.scoutWorkers.ToString();
+                    Game.townPopulation[index].job = Corot.People.People.Jobs.Scout;
                     break;
                 default:
                     break;
             }
+            jobAssignment.Visibility = Visibility.Hidden;
+            jobUI.Visibility = Visibility.Hidden;
+            UpdatePeopleList();
         }
     }
 }
