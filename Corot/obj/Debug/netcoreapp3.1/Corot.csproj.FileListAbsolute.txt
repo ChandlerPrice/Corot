@@ -4,7 +4,6 @@ C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.dev.json
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.dll
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.pdb
-C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.g.cs
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\App.g.cs
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.cache
@@ -83,3 +82,8 @@ C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.C
 C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
 C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
 C:\Users\Spencer\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.genruntimeconfig.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.g.cs
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.baml
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.g.cs
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.baml

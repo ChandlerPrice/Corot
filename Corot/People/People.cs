@@ -2,27 +2,77 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Corot
+namespace Corot.People
 {
     class People
     {
+        Random random = new Random();
+        int randName;
         public People()
         {
-            name = "Bob";
-            engineering = 1;
-            combat = 1;
-            medical = 1;
-            scavenging = 1;
-            leadership = 1;
+            randName = random.Next(1, 10);
+
+            switch (randName)
+            {
+                case 1:
+                    name = Names.Billy.ToString();
+                    break;
+                case 2:
+                    name = Names.Bob.ToString();
+                    break;
+                case 3:
+                    name = Names.Brandon.ToString();
+                    break;
+                case 4:
+                    name = Names.Chandler.ToString();
+                    break;
+                case 5:
+                    name = Names.Gage.ToString();
+                    break;
+                case 6:
+                    name = Names.Jack.ToString();
+                    break;
+                case 7:
+                    name = Names.John.ToString();
+                    break;
+                case 8:
+                    name = Names.Phil.ToString();
+                    break;
+                case 9:
+                    name = Names.Spencer.ToString();
+                    break;
+                case 10:
+                    name = Names.Tatheim.ToString();
+                    break;
+            }
+            engineering = random.Next(3)+1;
+            combat = random.Next(3) + 1;
+            medical = random.Next(3) + 1;
+            scavenging = random.Next(3) + 1;
+            leadership = random.Next(3) + 1;
             alive = true;
             injured = false;
             special = 0;
             weapon = "N/A";
             tool = "N/A";
-            idle = false;
+            job = Jobs.guardingWorkers.ToString();
         }
 
-        public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, bool idle)
+        public enum Names
+        {
+            Bob,
+            John,
+            Phil,
+            Jack,
+            Billy,
+            Gage,
+            Brandon,
+            Chandler,
+            Spencer,
+            Tatheim
+        }
+
+        public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, List<Jobs> job)
         {
             this.name = name;
             this.engineering = engineering;
@@ -35,7 +85,7 @@ namespace Corot
             this.special = special;
             this.weapon = weapon;
             this.tool = tool;
-            this.idle = idle;
+            this.job = job.ToString();
         }
 
 
@@ -50,7 +100,7 @@ namespace Corot
         public bool alive { get; set; }
         public bool injured { get; set; }
         public int special { get; set; }
-        public bool idle { get; set; }
+        public string job { get; set; }
 
         //Equipment
         public string weapon { get; set; }
