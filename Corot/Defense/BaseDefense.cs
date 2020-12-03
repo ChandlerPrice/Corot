@@ -27,9 +27,6 @@ namespace Corot
                 {
                     idlePeople.Add(Game.townPopulation[i]);
                 }
-
-
-
             }
 
             if (Game.townPopulation.Count <= 0)

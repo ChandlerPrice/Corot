@@ -33,6 +33,22 @@ namespace Corot
                 switch (dailyEvent)
                 {
                     case randomDailyEventsEnum.zombieAttack:
+                        int attack = rand.Next(100);
+                        BaseDefense baseDefense = new BaseDefense();
+                        if (attack >= baseDefense.calculateDefense())
+                        {
+                            dailyPrint = "You were attacked";
+                            for (int i = 0; i < rand.Next(3 * (population/2)); i++)
+                            {
+                                randomValue = rand.Next(townPopulation.Count);
+                                dailyPrint = dailyPrint + ($"   Died: {Game.townPopulation[randomValue].name}     ");
+                                System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
+                                Game.townPopulation.RemoveAt(randomValue);
+                            }
+                            population = Game.townPopulation.Count;
+
+                            System.Diagnostics.Debug.WriteLine($"Population: {population}");
+                        }
                         break;
                     case randomDailyEventsEnum.zombieHordeAttack:
                         break;
@@ -41,7 +57,6 @@ namespace Corot
                         {
                             randomValue = rand.Next(townPopulation.Count);
                             dailyPrint = dailyPrint + ($"   Died: {Game.townPopulation[randomValue].name}     ");
-                            //main.peopleInfoList.Items.Add($"Died: {Game.townPopulation[randomValue].name}");
                             System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                             Game.townPopulation.RemoveAt(randomValue);
                         }
