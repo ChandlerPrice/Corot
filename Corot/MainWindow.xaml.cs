@@ -34,6 +34,9 @@ namespace Corot
         BaseDefense baseDefence = new BaseDefense();
         //Corot.People.People person = new Corot.People.People();
         Random random = new Random();
+        int numOfBuildings;
+        List<Corot.Buildings.Building> buildings;
+        
 
         public MainWindow()
         {
@@ -47,6 +50,15 @@ namespace Corot
                 Game.townPopulation.Add(person);
             }
             UpdatePeopleList();
+            Buildings.Building residentialBuilding = new Buildings.Building("residential");
+            Buildings.Building defenseBuilding = new Buildings.Building("defense");
+            Buildings.Building farmBuilding = new Buildings.Building("Farm");
+
+            buildings.Add(residentialBuilding);
+            buildings.Add(defenseBuilding);
+            buildings.Add(farmBuilding);
+
+            numOfBuildings = buildings.Count();
 
             textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
         }
@@ -117,6 +129,15 @@ namespace Corot
 
         public void Food()
         {
+            Buildings.Building building;
+            for(int i = 0; i < buildings.Count(); i++)
+            {
+                if(building.typeOfBuilding == "Farm")
+                {
+                    game.food += 10;
+                }
+            }
+
             int starveChance;
             game.population = Game.townPopulation.Count();
             game.food -= game.population;
