@@ -35,7 +35,7 @@ namespace Corot
         //Corot.People.People person = new Corot.People.People();
         Random random = new Random();
         int numOfBuildings;
-        List<Corot.Buildings.Building> buildings;
+        //List<Corot.Buildings.Building> buildings;
         
 
         public MainWindow()
@@ -43,8 +43,8 @@ namespace Corot
             InitializeComponent();
             game = new Game();
             game.day = 1;
-            game.food = 5;
-            for (int i=0;i<4; i++)
+            game.food = 50;
+            for (int i=0;i<8; i++)
             {
                 Corot.People.People person = new Corot.People.People();
                 Game.townPopulation.Add(person);
@@ -54,13 +54,13 @@ namespace Corot
             Buildings.Building defenseBuilding = new Buildings.Building("defense");
             Buildings.Building farmBuilding = new Buildings.Building("Farm");
 
-            buildings.Add(residentialBuilding);
-            buildings.Add(defenseBuilding);
-            buildings.Add(farmBuilding);
+            //buildings.Add(residentialBuilding);
+            //buildings.Add(defenseBuilding);
+            //buildings.Add(farmBuilding);
 
-            numOfBuildings = buildings.Count();
+            //numOfBuildings = buildings.Count();
 
-            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}");
+            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
         }
 
         private void UpdatePeopleList()
@@ -91,19 +91,23 @@ namespace Corot
                 }
                 //Update Day
                 game.day += 1;
-                System.Diagnostics.Debug.WriteLine($"Day {game.day}\n~~~~~~~\n");
                 var calculateDanger = baseDefence.calculateDefense();
+                checkResearch();
                 setResearch();
                 game.Research();
-                System.Diagnostics.Debug.WriteLine($"Research points: {Corot.Research.Research.researchPoints}");
-                System.Diagnostics.Debug.WriteLine($"Required research: {Corot.Research.Research.maxResearch}");
+                checkResearch();
 
                 //Call random events
                 outputDisplay.Text = game.DailyEvent();
                 Food();
                 countPeople();
                 UpdatePeopleList();
-                textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nDanger: {calculateDanger}");
+                textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nDanger: {calculateDanger}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
+            }
+            else
+            {
+                //Game Over screen
+                System.Windows.Application.Current.Shutdown();
             }
         }
 
@@ -116,7 +120,7 @@ namespace Corot
 
             if (result == MessageBoxResult.Yes)    
             {
-                Close();
+                System.Windows.Application.Current.Shutdown();
             }
              */
             System.Windows.Application.Current.Shutdown();
@@ -129,6 +133,7 @@ namespace Corot
 
         public void Food()
         {
+            /*
             Buildings.Building building;
             for(int i = 0; i < buildings.Count(); i++)
             {
@@ -137,7 +142,7 @@ namespace Corot
                     game.food += 10;
                 }
             }
-
+            */
             int starveChance;
             game.population = Game.townPopulation.Count();
             game.food -= game.population;
@@ -158,15 +163,28 @@ namespace Corot
             }
         }
 
+        public void checkResearch()
+        {
+            if (Research.Research.activeResearch == null)
+            {
+                researchUI.Visibility = Visibility.Visible;
+                ResearchListBox.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                researchUI.Visibility = Visibility.Hidden;
+                ResearchListBox.Visibility = Visibility.Hidden;
+            }
+        }
+      
         public void setResearch()
         {
             Corot.Research.Research.researchPoints = 0;
-
             for (int i = 0; i < Game.townPopulation.Count; i++)
             {
                 if (Game.townPopulation[i].job == Corot.People.People.Jobs.Scientist)
                 {
-
+                    Corot.Research.Research.researchPoints += Game.townPopulation[i].engineering;
                 }
             }
         }
@@ -185,8 +203,8 @@ namespace Corot
                     $"Medical: {Game.townPopulation[index].medical}\n" +
                     $"Scavenging: {Game.townPopulation[index].scavenging}\n" +
                     $"Leadership: {Game.townPopulation[index].leadership}\n";
-                jobAssignment.Visibility = Visibility.Visible;
-                jobUI.Visibility = Visibility.Visible;
+                    jobAssignment.Visibility = Visibility.Visible;
+                    jobUI.Visibility = Visibility.Visible;
             }
         }
         private void ResearchListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
