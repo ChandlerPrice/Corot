@@ -20,6 +20,7 @@ namespace Corot
         public int food { get { return Food; } set { Food = value; } }
 
         public static List<Corot.People.People> townPopulation = new List<Corot.People.People>();
+        public static int removal { get; set; }
 
 
 
@@ -39,11 +40,11 @@ namespace Corot
                         if (attack >= baseDefense.calculateDefense())
                         {
                             dailyPrint = "You were attacked";
-                            for (int i = 0; i <= rand.Next(3 * (population/2)); i++)
+                            int test = rand.Next(3 * ((population / 10)+1));
+                            for (int i = 0; i <= test; i++)
                             {
                                 randomValue = rand.Next(townPopulation.Count);
                                 dailyPrint = dailyPrint + ($"\nDied: {Game.townPopulation[randomValue].name}");
-                                System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                                 Game.townPopulation.RemoveAt(randomValue);
                             }
                             population = Game.townPopulation.Count;
@@ -61,7 +62,6 @@ namespace Corot
                             {
                                 randomValue = rand.Next(townPopulation.Count);
                                 dailyPrint = dailyPrint + ($"\nDied: {Game.townPopulation[randomValue].name}");
-                                System.Diagnostics.Debug.WriteLine($"Died: {randomValue}");
                                 Game.townPopulation.RemoveAt(randomValue);
                             }
                             population = Game.townPopulation.Count;
@@ -90,8 +90,6 @@ namespace Corot
                         }
                         population = Game.townPopulation.Count;
                         dailyPrint = dailyPrint + ("New people added");
-                        System.Diagnostics.Debug.WriteLine("New people added");
-                        System.Diagnostics.Debug.WriteLine($"Population: {population}");
                         break;
                     case randomDailyEventsEnum.extraFood:
                         Food += rand.Next(20);
@@ -114,118 +112,143 @@ namespace Corot
 
         public void Research()
         {
-            switch (Corot.Research.Research.activeResearch)
+            if (Corot.Research.Research.activeResearch == null)
             {
-                case "zombieVitals":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.zombieVitalsComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "headshot":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.headshotComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "antivenom":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.antiVenomComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "signs":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.signsComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "diplomacy":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.diplomacyComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "radio":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.radioComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "bunkBeds":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.bunkBedsComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "pesticides":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.pesticidesComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                case "fortifyWalls":
-                    if (Corot.Research.Research.maxResearch > 0)
-                    {
-                        Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
-                    }
-                    else
-                    {
-                        Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
-                        Corot.Research.Research.fortifyWallsComplete = true;
-                        Corot.Research.Research.totalResearchDone += 1;
-                    }
-                    break;
-                default:
-                    break;
+                
+            }
+            else
+            {
+                switch (Corot.Research.Research.activeResearch)
+                {
+                    case "zombieVitals":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.zombieVitalsComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 1;
+                        }
+                        break;
+                    case "headshot":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.headshotComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 2;
+                        }
+                        break;
+                    case "antivenom":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.antiVenomComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 3;
+                        }
+                        break;
+                    case "signs":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.signsComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 4;
+                        }
+                        break;
+                    case "diplomacy":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.diplomacyComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 5;
+                        }
+                        break;
+                    case "radio":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.radioComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 6;
+                        }
+                        break;
+                    case "bunkBeds":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.bunkBedsComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 7;
+                        }
+                        break;
+                    case "pesticides":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.pesticidesComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 8;
+                        }
+                        break;
+                    case "fortifyWalls":
+                        if (Corot.Research.Research.maxResearch > 0)
+                        {
+                            Corot.Research.Research.maxResearch -= Corot.Research.Research.researchPoints;
+                        }
+                        else
+                        {
+                            Corot.Research.Research.maxResearch = 100 * (Corot.Research.Research.totalResearchDone + 1);
+                            Corot.Research.Research.fortifyWallsComplete = true;
+                            Corot.Research.Research.totalResearchDone += 1;
+                            Corot.Research.Research.activeResearch = null;
+                            removal = 9;
+                        }
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }

@@ -9,7 +9,7 @@ namespace Corot
 
         int defense;
         int zombies = 100;
-        //int horde;
+        //attcah Spencers buildings & defense buildings
         int buildings = 3;
         int defenseBuildings = 1;
         int danger = 0;
@@ -23,7 +23,7 @@ namespace Corot
             defense = 1 + buildings + (defenseBuildings * 8);
             for (int i = 0; i < Game.townPopulation.Count; i++)
             {
-                if (Game.townPopulation[i].job == Corot.People.Jobs.guardingWorkers.ToString())
+                if (Game.townPopulation[i].job == Corot.People.People.Jobs.Guard)
                 {
                     guardingPeople.Add(Game.townPopulation[i]);
                 }

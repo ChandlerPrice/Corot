@@ -15,34 +15,34 @@ namespace Corot.People
             switch (randName)
             {
                 case 1:
-                    name = Names.Billy.ToString();
+                    name = Name.Billy;
                     break;
                 case 2:
-                    name = Names.Bob.ToString();
+                    name = Name.Bob;
                     break;
                 case 3:
-                    name = Names.Brandon.ToString();
+                    name = Name.Brandon;
                     break;
                 case 4:
-                    name = Names.Chandler.ToString();
+                    name = Name.Chandler;
                     break;
                 case 5:
-                    name = Names.Gage.ToString();
+                    name = Name.Gage;
                     break;
                 case 6:
-                    name = Names.Jack.ToString();
+                    name = Name.Jack;
                     break;
                 case 7:
-                    name = Names.John.ToString();
+                    name = Name.John;
                     break;
                 case 8:
-                    name = Names.Phil.ToString();
+                    name = Name.Phil;
                     break;
                 case 9:
-                    name = Names.Spencer.ToString();
+                    name = Name.Spencer;
                     break;
                 case 10:
-                    name = Names.Tatheim.ToString();
+                    name = Name.Tatheim;
                     break;
             }
             engineering = random.Next(3)+1;
@@ -55,10 +55,10 @@ namespace Corot.People
             special = 0;
             weapon = "N/A";
             tool = "N/A";
-            job = Jobs.guardingWorkers.ToString();
+            job = Jobs.Guard;
         }
 
-        public enum Names
+        public enum Name
         {
             Bob,
             John,
@@ -72,7 +72,17 @@ namespace Corot.People
             Tatheim
         }
 
-        public People(string name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, List<Jobs> job)
+        public enum Jobs
+        {
+            Guard,
+            Fighter,
+            Farmer,
+            Scavenger,
+            Scientist,
+            Scout
+        }
+
+        public People(Name name, int engineering, int combat, int medical, int scavenging, int leadership, bool alive, bool injured, int special, string weapon, string tool, Jobs job)
         {
             this.name = name;
             this.engineering = engineering;
@@ -85,7 +95,7 @@ namespace Corot.People
             this.special = special;
             this.weapon = weapon;
             this.tool = tool;
-            this.job = job.ToString();
+            this.job = job;
         }
 
 
@@ -100,13 +110,13 @@ namespace Corot.People
         public bool alive { get; set; }
         public bool injured { get; set; }
         public int special { get; set; }
-        public string job { get; set; }
+        public Jobs job { get; set; }
 
         //Equipment
         public string weapon { get; set; }
         public string tool { get; set; }
 
         //Other
-        public string name { get; set; }
+        public Name name { get; set; }
     }
 }
