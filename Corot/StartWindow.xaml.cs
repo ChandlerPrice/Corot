@@ -44,9 +44,9 @@ namespace Corot
 
         private void StartButton_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
             MainWindow win = new MainWindow();
             win.Show();
+            this.Close();
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)

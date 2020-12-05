@@ -141,9 +141,9 @@ namespace Corot
 
             if (result == MessageBoxResult.Yes)    
             {
-                this.Close();
                 StartWindow win = new StartWindow();
                 win.Show();
+                this.Close();
             }
         }
 
