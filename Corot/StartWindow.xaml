@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="StartWindow" Height="450" Width="800">
     <Grid>
-        <Image Source="/Images/CreditsBackground.jpg" Margin="-10"/>
+        <Image Source="/Images/CreditsBackground.jpg" Margin="-50"/>
         <TextBlock Text="RECONQUEST COROT-7B" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Opacity="0.8" Margin="50" FontFamily="Impact" FontSize="75" >
         </TextBlock>
-        <Button x:Name="StartButton" HorizontalAlignment="Center" Margin="0, 175, 0, 175" Content=" START GAME " Opacity="0.7" Foreground="White" Background="Black"  FontFamily="Impact" FontSize="50" MouseEnter="StartGame_MouseEnter" MouseLeave="StartGame_MouseLeave" Click="StartButton_Click">
+        <Button x:Name="StartButton" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 175" Content=" START GAME " Opacity="0.7" Foreground="White" Background="Black"  FontFamily="Impact" FontSize="50" MouseEnter="StartGame_MouseEnter" MouseLeave="StartGame_MouseLeave" Click="StartButton_Click">
         </Button>
-        <Button x:Name="ExitButton"  HorizontalAlignment="Center" Margin="0, 275, 0, 75" Content=" EXIT " Opacity="0.7" Foreground="White" Background="Black" FontFamily="Impact" FontSize="50" MouseEnter="Exit_MouseEnter" MouseLeave="Exit_MouseLeave" Click="ExitButton_Click">
+        <Button x:Name="ExitButton" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 100" Content=" EXIT " Opacity="0.7" Foreground="White" Background="Black" FontFamily="Impact" FontSize="50" MouseEnter="Exit_MouseEnter" MouseLeave="Exit_MouseLeave" Click="ExitButton_Click">
         </Button>
     </Grid>
 </Window>

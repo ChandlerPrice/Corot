@@ -117,17 +117,14 @@ namespace Corot
 
         public void Exit(object sender, RoutedEventArgs e)
         {
-            /*
-            MESSAGE BOX ASK TO CLOSE
-
             var result = MessageBox.Show("Your progress will not be saved!", "ARE YOU SURE YOU WANT TO EXIT?", MessageBoxButton.YesNo, MessageBoxImage.Question);
 
             if (result == MessageBoxResult.Yes)    
             {
-                System.Windows.Application.Current.Shutdown();
+                this.Close();
+                StartWindow win = new StartWindow();
+                win.Show();
             }
-             */
-            System.Windows.Application.Current.Shutdown();
         }
 
         public void countPeople()
