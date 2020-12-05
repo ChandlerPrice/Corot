@@ -1,24 +1,20 @@
 ﻿Corot
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
-C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\
 Corot
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\App.xaml
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\tathe\Source\Repos\Corot\Corot\App.xaml
 11151548125
 
-<<<<<<< Updated upstream
 21-795795626
-=======
-17538823756
->>>>>>> Stashed changes
-1931121861601
+1932110452489
 MainWindow.xaml;
 
-False
+True
 
