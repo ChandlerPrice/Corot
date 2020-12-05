@@ -35,7 +35,7 @@ namespace Corot
         //Corot.People.People person = new Corot.People.People();
         Random random = new Random();
         int numOfBuildings;
-        //List<Corot.Buildings.Building> buildings;
+        List<Corot.Buildings.Building> buildings;
         
 
         public MainWindow()
@@ -54,9 +54,9 @@ namespace Corot
             Buildings.Building defenseBuilding = new Buildings.Building("defense");
             Buildings.Building farmBuilding = new Buildings.Building("Farm");
 
-            //buildings.Add(residentialBuilding);
-            //buildings.Add(defenseBuilding);
-            //buildings.Add(farmBuilding);
+            buildings.Add(residentialBuilding);
+            buildings.Add(defenseBuilding);
+            buildings.Add(farmBuilding);
 
             //numOfBuildings = buildings.Count();
 
