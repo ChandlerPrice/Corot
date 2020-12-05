@@ -36,7 +36,7 @@ namespace Corot
         Random random = new Random();
         int numOfBuildings;
         List<Corot.Buildings.Building> buildings = new List<Buildings.Building>();
-        
+        List<Button> buttons = new List<Button>();
 
         public MainWindow()
         {
@@ -54,13 +54,17 @@ namespace Corot
             Buildings.Building defenseBuilding = new Buildings.Building("defense");
             Buildings.Building farmBuilding = new Buildings.Building("Farm");
 
+
             buildings.Add(residentialBuilding);
             buildings.Add(defenseBuilding);
             buildings.Add(farmBuilding);
 
-            //numOfBuildings = buildings.Count();
 
-            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
+            numOfBuildings = buildings.Count();
+
+            PopulationAdjusting();
+
+            textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population} / {game.MaxPopulation}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
         }
 
         private void UpdatePeopleList()
@@ -102,7 +106,7 @@ namespace Corot
                 Food();
                 countPeople();
                 UpdatePeopleList();
-                textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population}\nDanger: {calculateDanger}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
+                textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population} / {game.MaxPopulation}\nDanger: {calculateDanger}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
             }
             else
             {
@@ -133,18 +137,18 @@ namespace Corot
 
         public void Food()
         {
-            for(int i = 0; i < buildings.Count(); i++)
+            for (int i = 0; i < buildings.Count(); i++)
             {
-                if(buildings[i].typeOfBuilding == "Farm")
+                if (buildings[i].typeOfBuilding == "Farm")
                 {
                     game.food += 10;
                 }
             }
-            
+
             int starveChance;
             game.population = Game.townPopulation.Count();
             game.food -= game.population;
-            if (game.food < 0 )
+            if (game.food < 0)
             {
                 outputDisplay.Text += ("\n\nThe town is starving");
                 for (int i = 0; i < Game.townPopulation.Count; i++)
@@ -153,11 +157,22 @@ namespace Corot
                     if (starveChance == 1)
                     {
                         outputDisplay.Text += ($"\nDied: {Game.townPopulation[i].name}");
-                    Game.townPopulation.RemoveAt(i);
+                        Game.townPopulation.RemoveAt(i);
 
                     }
                 }
                 game.food = 0;
+            }
+        }
+
+        public void PopulationAdjusting()
+        {
+            for (int i = 0; i < buildings.Count(); i++)
+            {
+                if (buildings[i].typeOfBuilding == "residential")
+                {
+                    game.MaxPopulation += 10;
+                }
             }
         }
 
