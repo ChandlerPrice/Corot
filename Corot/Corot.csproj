@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\CreditsBackground.jpg" />
     <Resource Include="Images\HospitalBuildingImage.png" />
     <Resource Include="Images\ResearchBuildingImage.png" />
     <Resource Include="Images\DefenseBuildingImage.jpg" />

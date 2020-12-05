@@ -8,12 +8,12 @@ namespace Corot
     {
 
         int defense;
-        int zombies = 50;
-        //int horde;
-        int buildings = 4;
+        int zombies = 100;
+        //attcah Spencers buildings & defense buildings
+        int buildings = 3;
         int defenseBuildings = 1;
         int danger = 0;
-        List<People> idlePeople = new List<People>();
+        List<Corot.People.People> guardingPeople = new List<Corot.People.People>();
 
 
 
@@ -23,33 +23,23 @@ namespace Corot
             defense = 1 + buildings + (defenseBuildings * 8);
             for (int i = 0; i < Game.townPopulation.Count; i++)
             {
-                if (Game.townPopulation[i].idle)
+                if (Game.townPopulation[i].job == Corot.People.People.Jobs.Guard)
                 {
-                    idlePeople.Add(Game.townPopulation[i]);
-                }
-
-
-
-            }
-
-            if (Game.townPopulation.Count <= 0)
-            {
-                Console.WriteLine("No People in list");
-            }
-            else
-            {
-                //listObj[index].[property]
-                for (int i=0; i < idlePeople.Count; i++)
-                {
-                    defense = defense + idlePeople[i].combat;
-                    Console.WriteLine($"Defense: {defense}");
+                    guardingPeople.Add(Game.townPopulation[i]);
                 }
             }
-            Console.WriteLine($"Total Defense: {defense}");
+
+            for (int i=0; i < guardingPeople.Count; i++)
+            {
+                defense = defense + guardingPeople[i].combat;
+                System.Diagnostics.Debug.WriteLine($"Defense: {defense}");
+            }
+
+            System.Diagnostics.Debug.WriteLine($"Total Defense: {defense}");
 
             danger = zombies / (defense * 2);
 
-            Console.WriteLine($"Danger: {danger}");
+            System.Diagnostics.Debug.WriteLine($"Danger: {danger}");
             return danger;
         }
 

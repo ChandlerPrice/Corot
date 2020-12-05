@@ -4,8 +4,10 @@ using System.Text;
 
 namespace Corot.Research
 {
-    class Construction : Research
+    class Construction
     {
-
+        protected bool bunkBeds = false;
+        protected bool pesticides = false;
+        protected bool fortifyWalls = false;
     }
 }

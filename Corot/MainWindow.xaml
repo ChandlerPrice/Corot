@@ -5,22 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        WindowState="Normal"
+        Title="MainWindow" Height="800" Width="1600"
+        WindowState="Maximized"
         WindowStyle="None">
     <Grid>
         <Border BorderBrush="Black" BorderThickness="1"/>
-        <Menu x:Name="MainMenu" DockPanel.Dock="Top" >
-            <MenuItem Header="_TownName"/>
-            <MenuItem x:Name="populationHeader" Header="Population #4" >
-            </MenuItem>
-            <MenuItem x:Name="foodHeader" Header="Food #5"/>
-            <MenuItem  x:Name="dayHeader" Header="Day #1">
-                <MenuItem Header="Next Day" Click="NextDay"/>
-            </MenuItem>
+        <Menu x:Name="MainMenu" DockPanel.Dock="Top">
+            <MenuItem x:Name="gameHeader" Header="Corot-7b"/>
+            <MenuItem x:Name="settingsHeader" Header="Settings" Click="settingsHeader_Click"/>
+            <MenuItem x:Name="creditsHeader" Header="Credits" Click="creditsHeader_Click"/>
             <MenuItem Header="_Exit" Click="Exit"/>
         </Menu>
-        <Grid Margin="0, 20, 0, 0">
+        <Grid Margin="0, 20, 200, 0" Grid.Column="0">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*"/>
                 <ColumnDefinition Width="1*"/>
@@ -45,7 +41,7 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            
+
             <Button Grid.Column="0">Button 1</Button>
             <Button Grid.Column="1">Button 2</Button>
             <Button Grid.Column="2">Button 3</Button>
@@ -82,7 +78,7 @@
             <Button Grid.Column="7" Grid.Row="2">Button 8</Button>
             <Button Grid.Column="8" Grid.Row="2">Button 8</Button>
             <Button Grid.Column="9" Grid.Row="2">Button 8</Button>
-            
+
             <Button Grid.Column="0" Grid.Row="3">Button 1</Button>
             <Button Grid.Column="1" Grid.Row="3">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="3">Button 3</Button>
@@ -108,7 +104,7 @@
             <Button Grid.Column="7" Grid.Row="4">Button 8</Button>
             <Button Grid.Column="8" Grid.Row="4">Button 8</Button>
             <Button Grid.Column="9" Grid.Row="4">Button 8</Button>
-            
+
             <Button Grid.Column="0" Grid.Row="5">Button 1</Button>
             <Button Grid.Column="1" Grid.Row="5">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="5">Button 3</Button>
@@ -163,6 +159,36 @@
             <Button Grid.Column="7" Grid.Row="9">Button 8</Button>
             <Button Grid.Column="8" Grid.Row="9">Button 8</Button>
             <Button Grid.Column="9" Grid.Row="9">Button 8</Button>
+        </Grid>
+        <Grid Grid.Column="1" Width="200" HorizontalAlignment="Right" Margin="0, 20, 0, 0">
+            <Border BorderBrush="Gray" BorderThickness="100"/>
+            <TextBox x:Name="textBox" IsEnabled="False" TextWrapping="Wrap" Text="" Height="250" Margin="0, 0, 0, 0" VerticalAlignment="Top" Background="White"/>
+            <TextBlock x:Name="populationUI" VerticalAlignment="Top" Margin="10,80,130,0" Text="People:" FontSize="14"/>
+            <ComboBox x:Name="peopleListBox" Height="20" Margin="70,80,1,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="peopleListBox_SelectionChanged"/>
+            <TextBlock x:Name="researchUI" VerticalAlignment="Top" Margin="10,120,130,0" Text="Research:" FontSize="14"/>
+            <ComboBox x:Name="ResearchListBox" Height="20" Margin="70,120,1,0" VerticalAlignment="Top" MaxDropDownHeight="360" SelectionChanged="ResearchListBox_SelectionChanged">
+                <ComboBoxItem Content="[1] Bunk Beds"/>
+                <ComboBoxItem Content="[2] Fortify Walls"/>
+                <ComboBoxItem Content="[3] Pesticides"/>
+                <ComboBoxItem Content="[4] Vital Targets"/>
+                <ComboBoxItem Content="[5] Headshots"/>
+                <ComboBoxItem Content="[6] Anti Venom"/>
+                <ComboBoxItem Content="[7] Signs"/>
+                <ComboBoxItem Content="[8] Diplomacy"/>
+                <ComboBoxItem Content="[9] Radio"/>
+            </ComboBox>
+            <TextBlock x:Name="outputDisplay" Height="350" Margin="2,170,2,0" VerticalAlignment="Top" Background="White"/>
+            <TextBlock x:Name="jobUI" VerticalAlignment="Top" Margin="10,550,130,0" Text="Jobs:" FontSize="14" Visibility="Hidden"/>
+            <ComboBox x:Name="jobAssignment" Height="20" Margin="70, 550,0,0" VerticalAlignment="Top" SelectionChanged="jobAssignment_SelectionChanged" Visibility="Hidden">
+                <ComboBoxItem Content="[1] Guard"/>
+                <ComboBoxItem Content="[2] Fighter"/>
+                <ComboBoxItem Content="[3] Scavenger"/>
+                <ComboBoxItem Content="[4] Farmer"/>
+                <ComboBoxItem Content="[5] Scientist"/>
+                <ComboBoxItem Content="[6] Scout"/>
+            </ComboBox>
+            <Button Height="50" Content="Next Day" Margin="1, 0, 1, 51" VerticalAlignment="Bottom" Click="NextDay"/>
+            <Button Height="50" Content="Exit" Margin="1, 0, 1, 1" VerticalAlignment="Bottom" Click="Exit"/>
         </Grid>
     </Grid>
 </Window>
