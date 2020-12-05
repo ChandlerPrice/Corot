@@ -35,6 +35,7 @@ namespace Corot
         //Corot.People.People person = new Corot.People.People();
         Random random = new Random();
         int numOfBuildings;
+        int buttonNumber;
         List<Corot.Buildings.Building> buildings = new List<Buildings.Building>();
         List<Button> buttons = new List<Button>();
 
@@ -42,6 +43,7 @@ namespace Corot
         {
             InitializeComponent();
             game = new Game();
+            ButtonGeneration();
             game.day = 1;
             game.food = 50;
             for (int i=0;i<8; i++)
@@ -67,6 +69,18 @@ namespace Corot
             textBox.Text = ($"Day # {game.day}\nFood # {game.food}\nPopulation # {game.population} / {game.MaxPopulation}\nResearch: {Research.Research.researchPoints} | {Research.Research.maxResearch}");
         }
 
+        public void ButtonGeneration()
+        {
+            for (int column = 0; column <= 10; column++)
+            {
+                for (int row = 0; row <= 10; row++)
+                {
+                    Button button = new Button();
+                    button.Name = "button" + buttonNumber;
+                    buttonNumber++;
+                }
+            }
+        }
         private void UpdatePeopleList()
         {
             peopleListBox.Items.Clear();
@@ -79,7 +93,13 @@ namespace Corot
             game.population = Game.townPopulation.Count();
         }
 
+        public void BuildingGeneration()
+        {
+            for (int i = 0; i < buttons.Count(); i++)
+            {
 
+            }
+        }
 
         public void NextDay(object sender, RoutedEventArgs e)
         {
