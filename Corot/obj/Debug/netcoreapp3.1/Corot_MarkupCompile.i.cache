@@ -1,19 +1,19 @@
 ﻿Corot
 1.0.0.0
 
-winexe
+exe
 C#
 .cs
-C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Debug\netcoreapp3.1\
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\
 Corot
 none
 false
-TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Gage Somerville\Desktop\Projects\Corot\App.xaml
+TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1
+C:\Users\tathe\Source\Repos\Corot\Corot\App.xaml
 2-1523586177
 
 18-2117729570
-1931692930280
+1932110452489
 Credits.xaml;MainWindow.xaml;
 
 False
