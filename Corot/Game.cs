@@ -22,7 +22,7 @@ namespace Corot
         public static List<Corot.People.People> townPopulation = new List<Corot.People.People>();
         public static int removal { get; set; }
 
-
+      
 
         public string DailyEvent()
         {
