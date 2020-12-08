@@ -90,3 +90,6 @@ C:\Users\Spencer\source\repos\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.g.cs
 C:\Users\Spencer\source\repos\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.baml
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.g.cs
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.baml
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.g.cs
+C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.baml

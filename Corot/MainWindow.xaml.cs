@@ -130,8 +130,9 @@ namespace Corot
             }
             else
             {
-                //Game Over screen
-                System.Windows.Application.Current.Shutdown();
+                EndWindow end = new EndWindow();
+                end.Show();
+                this.Close();
             }
         }
 
