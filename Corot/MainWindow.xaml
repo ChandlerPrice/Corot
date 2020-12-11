@@ -67,10 +67,10 @@
             <Button Grid.Column="1" Grid.Row="2">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="2">Button 3</Button>
             <Button Grid.Column="3" Grid.Row="2">
-                <Image Source="Images/ResourceBuildingImage.png"/>
+                <Image Source="/Images/Farm.PNG"/>
             </Button>
             <Button Grid.Column="4" Grid.Row="2">
-                <Image Source="Images/HospitalBuildingImage.png"/>
+                <Image Source="/Images/ResearchBuildingImage.png"/>
             </Button>
             <Button Grid.Column="5" Grid.Row="2">Button 6</Button>
             <Button Grid.Column="6" Grid.Row="2">Button 7</Button>
@@ -82,10 +82,10 @@
             <Button Grid.Column="1" Grid.Row="3">Button 2</Button>
             <Button Grid.Column="2" Grid.Row="3">Button 3</Button>
             <Button Grid.Column="3" Grid.Row="3">
-                <Image Source="Images/HousingBuildingImage.png"/>
+                <Image Source="/Images/ResidentHome.png"/>
             </Button>
             <Button Grid.Column="4" Grid.Row="3">
-                <Image Source="Images/DefenseBuildingImage.jpg"/>
+                <Image Source="/Images/ArmyBase.png"/>
             </Button>
             <Button Grid.Column="5" Grid.Row="3">Button 6</Button>
             <Button Grid.Column="6" Grid.Row="3">Button 7</Button>
