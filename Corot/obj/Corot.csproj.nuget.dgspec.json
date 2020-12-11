@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {}
+    "C:\\Users\\Brandon Goldsworthy\\Source\\Repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\Corot.csproj": {
+    "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+        "projectUniqueName": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
         "projectName": "Corot",
-        "projectPath": "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
-        "packagesPath": "C:\\Users\\tathe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\obj\\",
+        "projectPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\Corot.csproj",
+        "packagesPath": "C:\\Users\\Chandler\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Chandler\\source\\repos\\COROT7B\\Corot\\Corot\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Chandler\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

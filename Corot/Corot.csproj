@@ -7,15 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\Armybase.png" />
     <None Remove="Images\DefenseBuildingImage.jpg" />
-    <None Remove="Images\Farm.PNG" />
     <None Remove="Images\HospitalBuildingImage.png" />
     <None Remove="Images\HousingBuildingImage.png" />
     <None Remove="Images\ResearchBuildingImage.png" />
-    <None Remove="Images\ResidentHome.png" />
     <None Remove="Images\ResourceBuildingImage.png" />
-    <None Remove="Images\TitleScreen.png" />
+    <None Remove="Images\Space.jpg" />
+    <None Remove="Images\Space_Zombies.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,12 +25,14 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Armybase.png" />
-    <Resource Include="Images\Farm.PNG" />
+    <Resource Include="Images\CreditsBackground.jpg" />
+    <Resource Include="Images\HospitalBuildingImage.png" />
     <Resource Include="Images\ResearchBuildingImage.png" />
-    <Resource Include="Images\ResidentHome.png" />
+    <Resource Include="Images\DefenseBuildingImage.jpg" />
+    <Resource Include="Images\HousingBuildingImage.png" />
     <Resource Include="Images\ResourceBuildingImage.png" />
-    <Resource Include="Images\TitleScreen.png" />
+    <Resource Include="Images\Space.jpg" />
+    <Resource Include="Images\Space_Zombies.jpg" />
   </ItemGroup>
 
   <ItemGroup>
