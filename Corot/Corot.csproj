@@ -7,13 +7,24 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Armybase.png" />
+    <None Remove="Images\CoRoT-7BLOWINGUP.jpg" />
     <None Remove="Images\DefenseBuildingImage.jpg" />
+    <None Remove="Images\EmptyLot.png" />
+    <None Remove="Images\ExitGame.png" />
+    <None Remove="Images\Farm.PNG" />
+    <None Remove="Images\GAMEOVER.png" />
     <None Remove="Images\HospitalBuildingImage.png" />
     <None Remove="Images\HousingBuildingImage.png" />
+    <None Remove="Images\NextDay.png" />
+    <None Remove="Images\PLAYAGAIN.png" />
     <None Remove="Images\ResearchBuildingImage.png" />
+    <None Remove="Images\ResidentHome.png" />
     <None Remove="Images\ResourceBuildingImage.png" />
     <None Remove="Images\Space.jpg" />
-    <None Remove="Images\Space_Zombies.jpg" />
+    <None Remove="Images\StartGame.png" />
+    <None Remove="Images\TITLENAME.png" />
+    <None Remove="Images\TitleScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -25,14 +36,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\CreditsBackground.jpg" />
-    <Resource Include="Images\HospitalBuildingImage.png" />
+    <Resource Include="Images\Armybase.png" />
+    <Resource Include="Images\CoRoT-7BLOWINGUP.jpg" />
+    <Resource Include="Images\EmptyLot.png" />
+    <Resource Include="Images\ExitGame.png" />
+    <Resource Include="Images\Farm.PNG" />
+    <Resource Include="Images\GAMEOVER.png" />
+    <Resource Include="Images\NextDay.png" />
+    <Resource Include="Images\PLAYAGAIN.png" />
     <Resource Include="Images\ResearchBuildingImage.png" />
-    <Resource Include="Images\DefenseBuildingImage.jpg" />
-    <Resource Include="Images\HousingBuildingImage.png" />
+    <Resource Include="Images\ResidentHome.png" />
     <Resource Include="Images\ResourceBuildingImage.png" />
     <Resource Include="Images\Space.jpg" />
-    <Resource Include="Images\Space_Zombies.jpg" />
+    <Resource Include="Images\StartGame.png" />
+    <Resource Include="Images\TITLENAME.png" />
+    <Resource Include="Images\TitleScreen.png" />
   </ItemGroup>
 
   <ItemGroup>
