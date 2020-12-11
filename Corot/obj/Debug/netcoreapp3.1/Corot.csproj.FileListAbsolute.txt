@@ -90,3 +90,5 @@ C:\Users\Spencer\source\repos\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.g.cs
 C:\Users\Spencer\source\repos\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.baml
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.g.cs
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.baml
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.g.cs
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.baml

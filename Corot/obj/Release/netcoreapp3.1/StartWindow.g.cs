@@ -69,7 +69,7 @@ namespace Corot {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Corot_cwa4olwa_wpftmp;component/startwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Corot;component/startwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\StartWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
