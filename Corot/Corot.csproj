@@ -12,6 +12,8 @@
     <None Remove="Images\HousingBuildingImage.png" />
     <None Remove="Images\ResearchBuildingImage.png" />
     <None Remove="Images\ResourceBuildingImage.png" />
+    <None Remove="Images\Space.jpg" />
+    <None Remove="Images\Space_Zombies.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +31,8 @@
     <Resource Include="Images\DefenseBuildingImage.jpg" />
     <Resource Include="Images\HousingBuildingImage.png" />
     <Resource Include="Images\ResourceBuildingImage.png" />
+    <Resource Include="Images\Space.jpg" />
+    <Resource Include="Images\Space_Zombies.jpg" />
   </ItemGroup>
 
   <ItemGroup>

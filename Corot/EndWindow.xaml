@@ -5,7 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
-        Title="EndWindow" Height="450" Width="800">
+        Title="EndWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStyle="None">
     <Grid>
         <Image Source="/Images/CreditsBackground.jpg" Margin="-50"/>
         <TextBlock Text="GAME OVER" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Opacity="0.8" Margin="50" FontFamily="Impact" FontSize="75" >

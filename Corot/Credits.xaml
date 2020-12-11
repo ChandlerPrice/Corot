@@ -14,17 +14,18 @@
             <MenuItem x:Name="gameHeader" Header="Corot-7b"/>
             <MenuItem x:Name="backHeader" Header="Back" Click="backHeader_Click"/>
             <MenuItem Header="_Exit" Click="Exit"/>
+        <Image Source="/Images/Space.jpg" Margin="-5"/>
         </Menu>
-        <TextBlock x:Name="CreditsTitle" Text="Credits" HorizontalAlignment="Center" FontSize="72" FontWeight="Bold" Margin="0,0,0,0" Grid.ColumnSpan="2" VerticalAlignment="Top"/>
-        <TextBlock x:Name="CreditsContent" Text="Game Programmers:" HorizontalAlignment="Center" Margin="0,120,0,0" FontSize="24" Grid.ColumnSpan="2"/>
-        <TextBlock x:Name="CreditsBrandon1" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,160,0,0" FontSize="14"/>
-        <TextBlock x:Name="CreditsChandler1" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,180,0,0" FontSize="14"/>
-        <TextBlock x:Name="CreditsGage1" Text="Gage Somerville" HorizontalAlignment="Center" Margin="0,200,0,0" FontSize="14"/>
-        <TextBlock x:Name="CreditsSpencer1" Text="Spencer Buff" HorizontalAlignment="Center" Margin="0,220,0,0" FontSize="14"/>
-        <TextBlock x:Name="CreditsArtists" Text="Artists:" HorizontalAlignment="Center" Margin="0,260,0,0" FontSize="24"/>
-        <TextBlock x:Name="CreditsTatheim1" Text="Tatheim Bahe" HorizontalAlignment="Center" Margin="0,300,0,0" FontSize="14"/>
-        <TextBlock x:Name="CreditsUI" Text="UI Developers:" HorizontalAlignment="Center" Margin="0,340,0,0" FontSize="24"/>
-        <TextBlock x:Name="CreditsChandler2" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,380,0,0" FontSize="14"/>
-        <TextBlock x:Name="CreditsBrandon2" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,400,0,0" FontSize="14"/>
+        <TextBlock x:Name="CreditsTitle" Text="Credits" HorizontalAlignment="Center" FontSize="72" FontWeight="Bold" Margin="0,0,0,0" Grid.ColumnSpan="2" VerticalAlignment="Top" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsContent" Text="Game Programmers:" HorizontalAlignment="Center" Margin="0,120,0,0" FontSize="24" Grid.ColumnSpan="2" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsBrandon1" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,160,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsChandler1" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,180,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsGage1" Text="Gage Somerville" HorizontalAlignment="Center" Margin="0,200,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsSpencer1" Text="Spencer Buff" HorizontalAlignment="Center" Margin="0,220,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsArtists" Text="Artists:" HorizontalAlignment="Center" Margin="0,260,0,0" FontSize="24" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsTatheim1" Text="Tatheim Bahe" HorizontalAlignment="Center" Margin="0,300,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsUI" Text="UI Developers:" HorizontalAlignment="Center" Margin="0,340,0,0" FontSize="24" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsChandler2" Text="Chandler Price" HorizontalAlignment="Center" Margin="0,380,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
+        <TextBlock x:Name="CreditsBrandon2" Text="Brandon Goldsworthy" HorizontalAlignment="Center" Margin="0,400,0,0" FontSize="14" Foreground="White" Opacity="0.8" FontFamily="Impact"/>
     </Grid>
 </Window>
