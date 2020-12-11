@@ -9,6 +9,7 @@
   <ItemGroup>
     <None Remove="Images\Armybase.png" />
     <None Remove="Images\CoRoT-7BLOWINGUP.jpg" />
+    <None Remove="Images\Credits.jpg" />
     <None Remove="Images\DefenseBuildingImage.jpg" />
     <None Remove="Images\EmptyLot.png" />
     <None Remove="Images\ExitGame.png" />
@@ -38,6 +39,7 @@
   <ItemGroup>
     <Resource Include="Images\Armybase.png" />
     <Resource Include="Images\CoRoT-7BLOWINGUP.jpg" />
+    <Resource Include="Images\Credits.jpg" />
     <Resource Include="Images\EmptyLot.png" />
     <Resource Include="Images\ExitGame.png" />
     <Resource Include="Images\Farm.PNG" />
@@ -47,7 +49,6 @@
     <Resource Include="Images\ResearchBuildingImage.png" />
     <Resource Include="Images\ResidentHome.png" />
     <Resource Include="Images\ResourceBuildingImage.png" />
-    <Resource Include="Images\Space.jpg" />
     <Resource Include="Images\StartGame.png" />
     <Resource Include="Images\TITLENAME.png" />
     <Resource Include="Images\TitleScreen.png" />

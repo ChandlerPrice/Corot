@@ -454,19 +454,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\tathe\\.nuget\\packages\\": {}
+    "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
+      "projectUniqueName": "C:\\Users\\Brandon Goldsworthy\\source\\repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
       "projectName": "Corot",
-      "projectPath": "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\Corot.csproj",
-      "packagesPath": "C:\\Users\\tathe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\tathe\\Source\\Repos\\Corot\\Corot\\obj\\",
+      "projectPath": "C:\\Users\\Brandon Goldsworthy\\source\\repos\\ChandlerPrice\\Corot\\Corot\\Corot.csproj",
+      "packagesPath": "C:\\Users\\Brandon Goldsworthy\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Brandon Goldsworthy\\source\\repos\\ChandlerPrice\\Corot\\Corot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\tathe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Brandon Goldsworthy\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -515,7 +515,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }
