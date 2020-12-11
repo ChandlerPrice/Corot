@@ -10,6 +10,9 @@
     <Compile Update="Credits.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="EndWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="StartWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -21,6 +24,9 @@
   </ItemGroup>
   <ItemGroup>
     <Page Update="Credits.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="EndWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
