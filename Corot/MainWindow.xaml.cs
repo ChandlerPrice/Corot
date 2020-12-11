@@ -52,8 +52,8 @@ namespace Corot
                 Game.townPopulation.Add(person);
             }
             UpdatePeopleList();
-            Buildings.Building residentialBuilding = new Buildings.Building("residential");
-            Buildings.Building defenseBuilding = new Buildings.Building("defense");
+            Buildings.Building residentialBuilding = new Buildings.Building("Residential");
+            Buildings.Building defenseBuilding = new Buildings.Building("Defense");
             Buildings.Building farmBuilding = new Buildings.Building("Farm");
 
 
@@ -348,5 +348,6 @@ namespace Corot
             jobUI.Visibility = Visibility.Hidden;
             UpdatePeopleList();
         }
+
     }
 }

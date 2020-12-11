@@ -5,14 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Corot"
         mc:Ignorable="d"
-        Title="StartWindow" Height="450" Width="800">
+        Title="StartWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStyle="None">
     <Grid>
-        <Image Source="/Images/CreditsBackground.jpg" Margin="-50"/>
-        <TextBlock Text="RECONQUEST COROT-7B" VerticalAlignment="Top" HorizontalAlignment="Center" Foreground="White" Opacity="0.8" Margin="50" FontFamily="Impact" FontSize="75" >
+        <Image Source="/Images/TitleScreen.png"
+               Margin="-10"/>
+        <TextBlock VerticalAlignment="Top"
+                   HorizontalAlignment="Center"
+                   Opacity="0.8"
+                   Margin="0, 250, 825, 0"
+                   FontFamily="Impact"
+                   FontSize="75"
+                   Height="84"
+                   Width="750">
+            <Image Source="/Images/TITLENAME.png"/>
         </TextBlock>
-        <Button x:Name="StartButton" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 175" Content=" START GAME " Opacity="0.7" Foreground="White" Background="Black"  FontFamily="Impact" FontSize="50" MouseEnter="StartGame_MouseEnter" MouseLeave="StartGame_MouseLeave" Click="StartButton_Click">
+        <Button x:Name="StartButton"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Width="400"
+                Margin="0, 0, 1150, 500"
+                Opacity="0.8"
+                Background="Transparent"
+                MouseEnter="StartGame_MouseEnter"
+                MouseLeave="StartGame_MouseLeave"
+                Click="StartButton_Click">
+            <Image Source="/Images/StartGame.png"/>
         </Button>
-        <Button x:Name="ExitButton" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0, 0, 0, 100" Content=" EXIT " Opacity="0.7" Foreground="White" Background="Black" FontFamily="Impact" FontSize="50" MouseEnter="Exit_MouseEnter" MouseLeave="Exit_MouseLeave" Click="ExitButton_Click">
+        <Button x:Name="ExitButton"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Width="150"
+                Margin="0, 0, 1400, 4"
+                Opacity="0.8"
+                Background="Transparent"
+                MouseEnter="Exit_MouseEnter"
+                MouseLeave="Exit_MouseLeave"
+                Click="ExitButton_Click">
+            <Image Source="/Images/ExitGame.png"/>
         </Button>
     </Grid>
 </Window>

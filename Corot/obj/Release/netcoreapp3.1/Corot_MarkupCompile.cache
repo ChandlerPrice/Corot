@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Gage Somerville\Desktop\Projects\Corot\obj\Release\netcoreapp3.1\
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Release\netcoreapp3.1\
 Corot
 none
 false
 TRACE;RELEASE;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Gage Somerville\Desktop\Projects\Corot\App.xaml
-2-1523586177
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\App.xaml
+4-98790899
 
-161793367819
-1931692930280
-Credits.xaml;MainWindow.xaml;
+181833967485
+193442108300
+Credits.xaml;EndWindow.xaml;MainWindow.xaml;StartWindow.xaml;
 
 True
 

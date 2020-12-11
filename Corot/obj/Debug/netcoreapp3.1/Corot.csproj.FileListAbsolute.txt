@@ -93,3 +93,39 @@ C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Start
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.g.cs
 C:\Users\Chandler\source\repos\COROT7B\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.baml
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.g.cs
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.g.cs
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.baml
+C:\Users\Brandon Goldsworthy\Source\Repos\ChandlerPrice\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.baml
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csprojAssemblyReference.cache
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.g.cs
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.g.cs
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.g.cs
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.cache
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot_MarkupCompile.lref
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Credits.baml
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\EndWindow.baml
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\StartWindow.baml
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.g.resources
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.pdb
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.exe
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.deps.json
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.json
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.runtimeconfig.dev.json
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\Corot.pdb
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.AssemblyInfoInputs.cache
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.AssemblyInfo.cs
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.CoreCompileInputs.cache
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.csproj.CopyComplete
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.dll
+C:\Users\tathe\Source\Repos\Corot\Corot\obj\Debug\netcoreapp3.1\Corot.genruntimeconfig.cache

@@ -40,10 +40,17 @@ namespace Corot
                         if (attack >= baseDefense.calculateDefense())
                         {
                             dailyPrint = "You were attacked";
-                            int test = rand.Next(3 * ((population / 10)+1));
+                            int preMath = 3 * ((population / 10) + 1);
+                            int test = rand.Next(preMath);
+                            if (test >= population)
+                            {
+                                test = population - 1;
+                            }
+                            System.Diagnostics.Debug.WriteLine($"Test: {test}");
                             for (int i = 0; i <= test; i++)
                             {
                                 randomValue = rand.Next(townPopulation.Count);
+                                System.Diagnostics.Debug.WriteLine($"Random: {randomValue}");
                                 dailyPrint = dailyPrint + ($"\nDied: {Game.townPopulation[randomValue].name}");
                                 Game.townPopulation.RemoveAt(randomValue);
                             }
@@ -58,9 +65,17 @@ namespace Corot
                         if (Corot.Research.Research.antiVenomComplete == false)
                         {
                             dailyPrint = "A disease outbreak occured";
-                            for (int i = 0; i <= rand.Next((population/10)+1); i++)
+                            int preMath = 3 * ((population / 10) + 1);
+                            int test = rand.Next(preMath);
+                            if (test >= population)
+                            {
+                                test = population-1;
+                            }
+                            System.Diagnostics.Debug.WriteLine($"Test: {test}");
+                            for (int i = 0; i <= test; i++)
                             {
                                 randomValue = rand.Next(townPopulation.Count);
+                                System.Diagnostics.Debug.WriteLine($"Random: {randomValue}");
                                 dailyPrint = dailyPrint + ($"\nDied: {Game.townPopulation[randomValue].name}");
                                 Game.townPopulation.RemoveAt(randomValue);
                             }
